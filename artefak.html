@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Artefak | Refyan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+  <main class="page">
+    
+    <!-- Background UM2.jpg dengan efek dark overlay agar teks tetap terbaca -->
+    <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), url('assets/UM2.jpg') center/cover no-repeat fixed; z-index: -1;"></div>
+    
+    <div class="orb two"></div>
+    <div class="orb three"></div>
+    
+    <section class="container section" style="padding-top:35px">
+      <div class="section-head reveal">
+        <div>
+          <div class="kicker">Artefak Pembelajaran</div>
+          <h2>Perjalanan<br>per semester.</h2>
+        </div>
+        <p>Pilih semester untuk membuka kumpulan mata kuliah. Struktur dibuat modular supaya dokumen dan karya bisa ditambahkan kapan saja.</p>
+      </div>
+      
+      <div class="semester-grid">
+        
+        <!-- Kartu Semester 1 dengan Highlight Biru -->
+        <a class="semester-card reveal" href="semester1.html" style="border: 2px solid #4a90e2; background: rgba(74, 144, 226, 0.1); box-shadow: 0 8px 32px rgba(74, 144, 226, 0.2);">
+          <span class="big" style="color: #4a90e2;">01</span>
+          <div class="kicker" style="color: #6fb3ff; font-weight: bold; letter-spacing: 2px;">SEMESTER 1</div>
+          <h3 style="color: #fff;">Fondasi<br>sebagai pendidik.</h3>
+          <p>Enam ruang mata kuliah untuk menyimpan artefak, refleksi, perangkat pembelajaran, dan dokumentasi PPL terbimbing.</p>
+          <span class="card-link" style="color: #6fb3ff; font-weight: bold;">Buka Semester 1 →</span>
+        </a>
+        
+        <!-- Kartu Semester 2 dengan Highlight Emas/Oranye -->
+        <a class="semester-card reveal delay-1" href="semester2.html" style="border: 2px solid #e2a04a; background: rgba(226, 160, 74, 0.1); box-shadow: 0 8px 32px rgba(226, 160, 74, 0.2);">
+          <span class="big" style="color: #e2a04a;">02</span>
+          <div class="kicker" style="color: #ffc477; font-weight: bold; letter-spacing: 2px;">SEMESTER 2</div>
+          <h3 style="color: #fff;">Penguatan<br>profesionalisme.</h3>
+          <p>Lima ruang mata kuliah yang siap dikembangkan menjadi dokumentasi pembelajaran dan praktik profesional.</p>
+          <span class="card-link" style="color: #ffc477; font-weight: bold;">Buka Semester 2 →</span>
+        </a>
+
+        <!-- Kartu Refleksi PPG dengan Highlight Ungu -->
+        <a class="semester-card reveal delay-2" href="refleksi-ppg.html" style="border: 2px solid #9b51e0; background: rgba(155, 81, 224, 0.1); box-shadow: 0 8px 32px rgba(155, 81, 224, 0.2);">
+          <span class="big" style="color: #9b51e0;">03</span>
+          <div class="kicker" style="color: #c489ff; font-weight: bold; letter-spacing: 2px;">REFLEKSI AKHIR</div>
+          <h3 style="color: #fff;">Refleksi<br>Perjalanan</h3>
+          <p>Rangkuman refleksi komprehensif dan evaluasi diri secara menyeluruh selama mengikuti program PPG.</p>
+          <span class="card-link" style="color: #c489ff; font-weight: bold;">Buka Refleksi PPG →</span>
+        </a>
+
+        <!-- Kartu Portofolio PPL Mandiri dengan Highlight Hijau Zamrud -->
+        <a class="semester-card reveal delay-1" href="portofolio-ppl-mandiri.html" style="border: 2px solid #10b981; background: rgba(16, 185, 129, 0.1); box-shadow: 0 8px 32px rgba(16, 185, 129, 0.2);">
+          <span class="big" style="color: #10b981;">04</span>
+          <div class="kicker" style="color: #34d399; font-weight: bold; letter-spacing: 2px;">PRAKTIK LAPANGAN</div>
+          <h3 style="color: #fff;">Portofolio<br>PPL Mandiri.</h3>
+          <p>Kumpulan dokumen esensial, laporan praktik mengajar, dan rekam jejak kegiatan manajerial di sekolah mitra.</p>
+          <span class="card-link" style="color: #34d399; font-weight: bold;">Buka PPL Mandiri →</span>
+        </a>
+        
+      </div>
+    </section>
+    
+    <section class="container section" style="padding-top:10px">
+      <!-- Penambahan sedikit background blur agar boks ini memisah dari background utama -->
+      <div class="empty reveal" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px);">
+        <div class="symbol">✦</div>
+        <h3>Setiap artefak punya cerita.</h3>
+        <p>Tambahkan bukti proses, bukan hanya hasil akhir. Dokumentasi dapat berupa PDF, foto, video, tautan, refleksi, LKPD, modul ajar, atau karya digital.</p>
+      </div>
+    </section>
+    
+  </main>
+  
+  <div id="footer-placeholder"></div>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

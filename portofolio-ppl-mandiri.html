@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PPL Mandiri | E-Portofolio Refyan</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    /* CSS Styling untuk Background Fallback & Marquee */
+    .bg-overlay {
+      position: fixed; 
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      height: 100%; 
+      background: linear-gradient(to bottom, rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.97)), url('assets/UM 1.jpg') center/cover no-repeat fixed; 
+      z-index: -1;
+    }
+
+    .slider-wrapper {
+      width: 100%;
+      max-width: 1000px;
+      margin: 60px auto 20px auto;
+      text-align: center;
+      padding-top: 40px;
+      border-top: 1px dashed rgba(255,255,255,0.2);
+    }
+    .marquee-container {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      padding: 15px 0 5px 0;
+      margin-top: 15px;
+      mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+      -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    }
+    .marquee-track {
+      display: inline-block;
+      animation: marquee 30s linear infinite;
+    }
+    .marquee-track:hover {
+      animation-play-state: paused;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .marquee-item {
+      display: inline-block;
+      width: 260px;
+      height: 170px;
+      margin: 0 10px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+    .marquee-item:hover {
+      transform: scale(1.05);
+    }
+    .marquee-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+  <main class="page">
+    
+    <!-- Background dengan sistem otomatis jika spasi/format berbeda -->
+    <div class="bg-overlay" id="custom-bg"></div>
+    
+    <div class="orb one"></div>
+    <div class="orb three"></div>
+    
+    <section class="container section" style="padding-top:35px">
+      <div class="section-head reveal">
+        <div>
+          <div class="kicker" style="color: #34d399;">Praktik Lapangan</div>
+          <h2>Portofolio<br>PPL Mandiri.</h2>
+        </div>
+        <p>Rekam jejak pelaksanaan Praktik Pengalaman Lapangan (PPL) Mandiri yang terbagi dalam empat siklus komprehensif di sekolah mitra.</p>
+      </div>
+      
+      <!-- Grid 4 Siklus -->
+      <div class="semester-grid">
+        
+        <!-- Siklus 1 -->
+        <a class="semester-card reveal" href="siklus1.html" style="border: 2px solid #10b981; background: rgba(16, 185, 129, 0.1); box-shadow: 0 8px 32px rgba(16, 185, 129, 0.2);">
+          <span class="big" style="color: #10b981;">01</span>
+          <div class="kicker" style="color: #34d399; font-weight: bold; letter-spacing: 2px;">SIKLUS 1 (UTS)</div>
+          <h3 style="color: #fff;">Implementasi<br>Awal.</h3>
+          <p>Memuat kelengkapan Analisis Modul Ajar, Media Pembelajaran, LKPD, serta Video Pelaksanaan untuk penilaian UTS.</p>
+          <span class="card-link" style="color: #34d399; font-weight: bold;">Buka Siklus 1 →</span>
+        </a>
+        
+        <!-- Siklus 2 -->
+        <a class="semester-card reveal delay-1" href="siklus2.html" style="border: 2px solid #3b82f6; background: rgba(59, 130, 246, 0.1); box-shadow: 0 8px 32px rgba(59, 130, 246, 0.2);">
+          <span class="big" style="color: #3b82f6;">02</span>
+          <div class="kicker" style="color: #60a5fa; font-weight: bold; letter-spacing: 2px;">SIKLUS 2 (UAS)</div>
+          <h3 style="color: #fff;">Pengembangan<br>Praktik.</h3>
+          <p>Memuat kelengkapan Analisis Modul Ajar, Media Pembelajaran, LKPD, serta Video Pelaksanaan untuk penilaian UAS.</p>
+          <span class="card-link" style="color: #60a5fa; font-weight: bold;">Buka Siklus 2 →</span>
+        </a>
+
+        <!-- Siklus 3 -->
+        <a class="semester-card reveal delay-2" href="siklus3.html" style="border: 2px solid #8b5cf6; background: rgba(139, 92, 246, 0.1); box-shadow: 0 8px 32px rgba(139, 92, 246, 0.2);">
+          <span class="big" style="color: #8b5cf6;">03</span>
+          <div class="kicker" style="color: #a78bfa; font-weight: bold; letter-spacing: 2px;">SIKLUS 3</div>
+          <h3 style="color: #fff;">Penguatan<br>Pedagogik.</h3>
+          <p>Memuat kelengkapan Analisis Modul Ajar, Media Pembelajaran, LKPD, serta Video Pelaksanaan pada tahapan ketiga.</p>
+          <span class="card-link" style="color: #a78bfa; font-weight: bold;">Buka Siklus 3 →</span>
+        </a>
+
+        <!-- Siklus 4 -->
+        <a class="semester-card reveal delay-1" href="siklus4.html" style="border: 2px solid #f59e0b; background: rgba(245, 158, 11, 0.1); box-shadow: 0 8px 32px rgba(245, 158, 11, 0.2);">
+          <span class="big" style="color: #f59e0b;">04</span>
+          <div class="kicker" style="color: #fbbf24; font-weight: bold; letter-spacing: 2px;">SIKLUS 4</div>
+          <h3 style="color: #fff;">Evaluasi &<br>Penyempurnaan.</h3>
+          <p>Memuat kelengkapan Analisis Modul Ajar, Media Pembelajaran, LKPD, serta Video Pelaksanaan tahap akhir.</p>
+          <span class="card-link" style="color: #fbbf24; font-weight: bold;">Buka Siklus 4 →</span>
+        </a>
+        
+      </div>
+
+      <!-- Slider Dokumentasi PPL Mandiri -->
+      <div class="slider-wrapper reveal">
+        <h3 style="color: #fff; font-size: 1.4rem; margin-bottom: 5px;">Dokumentasi PPL Mandiri</h3>
+        <p style="color: #888; font-size: 0.95rem; margin-bottom: 20px;">Sorot/sentuh gambar untuk menjeda <i>slider</i>.</p>
+        
+        <div class="marquee-container">
+          <div class="marquee-track">
+            <div class="marquee-item"><img src="assets/PPLM 1.jpeg" alt="PPL Mandiri 1" loading="lazy" onerror="this.src='assets/PPLM 1.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PPLM 2.jpeg" alt="PPL Mandiri 2" loading="lazy" onerror="this.src='assets/PPLM 2.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PPLM 3.jpeg" alt="PPL Mandiri 3" loading="lazy" onerror="this.src='assets/PPLM 3.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PPLM 4.jpeg" alt="PPL Mandiri 4" loading="lazy" onerror="this.src='assets/PPLM 4.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PPLM 5.jpeg" alt="PPL Mandiri 5" loading="lazy" onerror="this.src='assets/PPLM 5.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PPLM 6.jpeg" alt="PPL Mandiri 6" loading="lazy" onerror="this.src='assets/PPLM 6.jpg';"></div>
+            
+            <div class="marquee-item"><img src="assets/PPLM 1.jpeg" alt="PPL Mandiri 1" loading="lazy" onerror="this.src='assets/PPLM 1.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PPLM 2.jpeg" alt="PPL Mandiri 2" loading="lazy" onerror="this.src='assets/PPLM 2.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PPLM 3.jpeg" alt="PPL Mandiri 3" loading="lazy" onerror="this.src='assets/PPLM 3.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PPLM 4.jpeg" alt="PPL Mandiri 4" loading="lazy" onerror="this.src='assets/PPLM 4.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PPLM 5.jpeg" alt="PPL Mandiri 5" loading="lazy" onerror="this.src='assets/PPLM 5.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PPLM 6.jpeg" alt="PPL Mandiri 6" loading="lazy" onerror="this.src='assets/PPLM 6.jpg';"></div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+    
+    <div style="text-align: center; margin-top: 10px; margin-bottom: 50px;" class="reveal">
+      <a href="artefak.html" style="color: #aaa; text-decoration: none; font-size: 0.9rem; padding: 10px 20px; border: 1px solid rgba(255,255,255,0.2); border-radius: 50px; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='transparent'">← Kembali ke Artefak</a>
+    </div>
+    
+  </main>
+  
+  <div id="footer-placeholder"></div>
+
+  <!-- Skrip otomatis mendeteksi nama file UM 1 / UM1 jika ada perbedaan -->
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const bgElement = document.getElementById('custom-bg');
+      const imgTest = new Image();
+      imgTest.src = 'assets/UM 1.jpg';
+      imgTest.onerror = function() {
+        // Jika 'UM 1.jpg' gagal dimuat, coba variasikan namanya
+        bgElement.style.backgroundImage = "linear-gradient(to bottom, rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.97)), url('assets/UM1.jpg')";
+      };
+    });
+  </script>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pembelajaran Mendalam & Asesmen Lanjut | E-Portofolio Refyan</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    /* CSS untuk merapikan kotak teks refleksi agar di tengah dan lebar */
+    .refleksi-box {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      background: var(--card-bg, rgba(255, 255, 255, 0.03));
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 35px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    /* CSS untuk wadah PDF agar Full, Center & Punya Border Menarik */
+    .pdf-section {
+      width: 100%;
+      max-width: 1000px;
+      margin: 50px auto 20px; 
+      padding-top: 40px;
+      border-top: 1px dashed rgba(255,255,255,0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .pdf-container {
+      width: 100%;
+      height: 75vh;
+      min-height: 500px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 2px solid rgba(74, 144, 226, 0.4);
+      background: rgba(0, 0, 0, 0.4);
+      box-shadow: 0 0 30px rgba(74, 144, 226, 0.15), inset 0 0 20px rgba(0,0,0,0.5);
+    }
+    .pdf-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* CSS untuk Live Auto-Slider (Marquee) yang mulus */
+    .slider-wrapper {
+      width: 100%;
+      max-width: 1000px;
+      margin: 50px auto;
+      text-align: center;
+    }
+    .marquee-container {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      padding: 10px 0;
+      mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+      -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    }
+    .marquee-track {
+      display: inline-block;
+      /* Animasi durasi 30 detik untuk 5 gambar */
+      animation: marquee 30s linear infinite;
+    }
+    .marquee-track:hover {
+      animation-play-state: paused;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .marquee-item {
+      display: inline-block;
+      width: 280px;
+      height: 180px;
+      margin: 0 10px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+    .marquee-item:hover {
+      transform: scale(1.05);
+    }
+    .marquee-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+  <main class="page">
+    <div class="grid-bg"></div>
+    <div class="orb one"></div>
+    <div class="orb two"></div>
+    
+    <!-- Header Section -->
+    <section class="container section" style="padding-top: 35px;">
+      <div class="section-head reveal">
+        <div>
+          <div class="kicker">Semester 2 • Mata Kuliah Inti</div>
+          <h2>Pembelajaran Mendalam<br>dan Asesmen Lanjut.</h2>
+        </div>
+        <p>Merancang instrumen asesmen yang komprehensif untuk mengukur, mengevaluasi, dan membimbing proses pembelajaran bermakna.</p>
+      </div>
+    </section>
+
+    <!-- Apa Itu Mata Kuliah Section -->
+    <section class="container section">
+      <div class="cards" style="grid-template-columns: 1fr;">
+        <article class="card reveal">
+          <div class="card-num">TENTANG MATA KULIAH</div>
+          <h3>Apa Itu Pembelajaran Mendalam dan Asesmen Lanjut?</h3>
+          <p style="margin-bottom: 10px;">
+            <b>Pembelajaran Mendalam dan Asesmen Lanjut</b> adalah mata kuliah yang membahas bagaimana merancang dan melaksanakan pembelajaran yang berorientasi pada pemahaman bermakna, bukan sekadar hafalan. Pembelajaran mendalam (<i>deep learning</i>) mendorong peserta didik untuk mengaitkan pengetahuan dengan pengalaman nyata, berpikir kritis, kreatif, berkolaborasi, serta mengembangkan karakter dan tanggung jawab.
+          </p>
+          <p style="margin-bottom: 10px;">
+            Mata kuliah ini juga menempatkan <b>asesmen lanjut</b> sebagai bagian tak terpisahkan dari proses pembelajaran. Asesmen tidak hanya digunakan untuk menentukan nilai akhir, tetapi untuk mendiagnosis kesiapan belajar, memetakan kebutuhan siswa, memberikan umpan balik yang konstruktif, serta menjadi dasar pengambilan keputusan instruksional. Dengan demikian, pendidik mampu menghubungkan data asesmen dengan perancangan pembelajaran yang lebih tepat, adil, dan responsif terhadap keragaman peserta didik.
+          </p>
+          <p style="margin-bottom: 0;">
+            Melalui mata kuliah ini, mahasiswa mempelajari asesmen awal, penerapan kerangka <b>Universal Design for Learning (UDL)</b>, pendekatan <b>Teaching at the Right Level (TaRL)</b>, <b>Culturally Responsive Teaching (CRT)</b>, serta pengolahan dan pemanfaatan hasil asesmen untuk perbaikan pembelajaran secara berkelanjutan.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Artefak Section -->
+    <section class="container section">
+      <div class="section-head reveal">
+        <div>
+          <div class="kicker">Dokumentasi Karya</div>
+          <h2>Artefak Pembelajaran.</h2>
+        </div>
+        <p>Kumpulan rancangan instrumen asesmen, rubrik penilaian, dan laporan analisis hasil belajar per topik.</p>
+      </div>
+      <div class="cards">
+        
+        <!-- Topik 1 -->
+        <article class="card reveal">
+          <div class="card-num">TOPIK 01</div>
+          <h3>Asesmen Awal Pembelajaran Mendalam</h3>
+          <p>Mengidentifikasi kesiapan belajar, minat, dan profil peserta didik sebagai dasar merancang pembelajaran mendalam yang tepat sasaran dan berpihak pada siswa.</p>
+          <a class="card-link" href="https://drive.google.com/drive/folders/1rMGuxGCP0cHR1lz7LWPmeZ8-fdYlN24F?usp=drive_link" target="_blank" rel="noopener">Buka Folder Topik 1 ↗</a>
+        </article>
+        
+        <!-- Topik 2 -->
+        <article class="card reveal delay-1">
+          <div class="card-num">TOPIK 02</div>
+          <h3>Penerapan Pembelajaran Mendalam dengan Kerangka Kerja UDL</h3>
+          <p>Menerapkan prinsip <i>Universal Design for Learning</i> (UDL) untuk merancang pembelajaran yang inklusif, fleksibel, dan dapat diakses oleh semua peserta didik.</p>
+          <a class="card-link" href="https://drive.google.com/drive/folders/1mUdSTjewCMKT7l16YU_cMMKnjR-MisES?usp=drive_link" target="_blank" rel="noopener">Buka Folder Topik 2 ↗</a>
+        </article>
+
+        <!-- Topik 3 -->
+        <article class="card reveal delay-2">
+          <div class="card-num">TOPIK 03</div>
+          <h3>Pembelajaran Mendalam melalui Pendekatan TaRL</h3>
+          <p>Menyesuaikan pembelajaran berdasarkan tingkat kemampuan dan kebutuhan nyata peserta didik melalui pendekatan <i>Teaching at the Right Level</i> (TaRL).</p>
+          <a class="card-link" href="https://drive.google.com/drive/folders/1XheODXRQT9Z26mZPInnSLyM91hflpW-P?usp=drive_link" target="_blank" rel="noopener">Buka Folder Topik 3 ↗</a>
+        </article>
+
+        <!-- Topik 4 -->
+        <article class="card reveal">
+          <div class="card-num">TOPIK 04</div>
+          <h3>Pembelajaran Mendalam melalui Culturally Responsive Teaching</h3>
+          <p>Mengintegrasikan latar belakang budaya peserta didik ke dalam pembelajaran agar materi menjadi lebih relevan, bermakna, dan menghargai keberagaman.</p>
+          <a class="card-link" href="https://drive.google.com/drive/folders/1oyN7cjCwTeNz0BroTd60seS1ExYWgxh1?usp=drive_link" target="_blank" rel="noopener">Buka Folder Topik 4 ↗</a>
+        </article>
+
+        <!-- Topik 5 -->
+        <article class="card reveal delay-1">
+          <div class="card-num">TOPIK 05</div>
+          <h3>Pengolahan dan Pemanfaatan Hasil Asesmen pada Pembelajaran Mendalam</h3>
+          <p>Mengolah data hasil asesmen untuk memetakan capaian siswa, memberikan umpan balik, serta merancang tindak lanjut pembelajaran yang lebih tepat.</p>
+          <a class="card-link" href="https://drive.google.com/drive/folders/1hZqZI-pMOyR6JFgKdVBaFYLN2aGXmGND?usp=drive_link" target="_blank" rel="noopener">Buka Folder Topik 5 ↗</a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Refleksi Akhir Section -->
+    <section class="container section">
+      <div class="section-head reveal">
+        <div>
+          <div class="kicker">Evaluasi Diri</div>
+          <h2>Refleksi Pengalaman.</h2>
+        </div>
+        <p>Membuktikan bahwa nilai akhir bukanlah garis finis, melainkan data untuk menentukan langkah perbaikan selanjutnya.</p>
+      </div>
+
+      <!-- Teks Refleksi (Centered Box) -->
+      <div class="refleksi-box reveal">
+        <h3 style="color: #fff; font-size: 1.5rem; margin-bottom: 15px;">Makna Pembelajaran Bagi Saya</h3>
+        <p style="margin-bottom: 15px; line-height: 1.7; color: var(--text-muted, #ccc);">
+          Mata kuliah ini merekonstruksi cara pandang saya terhadap angka di rapor siswa. Dahulu, saya menganggap evaluasi hanya sebagai alat untuk melabeli siswa "tuntas" atau "belum tuntas". Namun, melalui pendalaman materi asesmen lanjut, saya menyadari bahwa asesmen sejatinya adalah alat diagnosis. Dalam pembelajaran Informatika misalnya, ketika siswa gagal menyusun kode program, rubrik yang jelas akan membantu saya memetakan apakah ia gagal di pemahaman algoritma dasar, atau sekadar ketidaktelitian sintaks.
+        </p>
+        <p style="margin-bottom: 0; line-height: 1.7; color: var(--text-muted, #ccc);">
+          Pengalaman berharga lainnya adalah pentingnya "Umpan Balik" (<i>Feedback</i>). Memberikan tanda silang pada jawaban salah tidak akan membuat siswa pintar, tetapi memberikan komentar konstruktif tentang bagaimana ia bisa memperbaikinya akan menumbuhkan <i>growth mindset</i>. Ke depannya, saya berkomitmen untuk selalu menyediakan rubrik yang transparan sebelum siswa memulai proyek (PjBL), sehingga mereka memiliki kontrol dan tanggung jawab atas target belajarnya sendiri.
+        </p>
+      </div>
+
+      <!-- PDF Viewer Section -->
+      <div class="pdf-section reveal delay-1">
+        <h3 style="color: #6fb3ff; font-size: 1rem; letter-spacing: 3px; margin-bottom: 25px; text-transform: uppercase;">✦ Dokumen Refleksi LK 2 ✦</h3>
+        <div class="pdf-container">
+          <!-- Link PDF diubah ke mode preview agar bisa embed -->
+          <iframe src="https://drive.google.com/file/d/110iSef9C29YSqEvp9tXUi3Air_pW_LH1/preview" allow="autoplay" loading="lazy"></iframe>
+        </div>
+        <div style="margin-top: 25px;">
+          <a class="btn primary" href="assets/Refleksi Pembelajaran Mendalam dan Asesmen Lanjut.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 8px;">
+            <span>📄</span> Buka & Download PDF
+          </a>
+        </div>
+      </div>
+
+      <!-- Live Auto-Slider Foto (PMAL 1 sampai PMAL 5) -->
+      <div class="slider-wrapper reveal delay-2">
+        <h3 style="color: #fff; font-size: 1.2rem; margin-bottom: 5px;">Jejak Dokumentasi</h3>
+        <p style="color: #888; font-size: 0.9rem; margin-bottom: 20px;">Arahkan kursor untuk menghentikan gambar sementara.</p>
+        
+        <div class="marquee-container">
+          <div class="marquee-track">
+            <!-- Set Gambar Pertama (5 Gambar) -->
+            <div class="marquee-item"><img src="assets/PMAL 1.jpeg" alt="PMAL 1" loading="lazy" onerror="this.src='assets/PMAL 1.jpg'; this.onerror=null;"></div>
+            <div class="marquee-item"><img src="assets/PMAL 2.jpeg" alt="PMAL 2" loading="lazy" onerror="this.src='assets/PMAL 2.jpg'; this.onerror=null;"></div>
+            <div class="marquee-item"><img src="assets/PMAL 3.jpeg" alt="PMAL 3" loading="lazy" onerror="this.src='assets/PMAL 3.jpg'; this.onerror=null;"></div>
+            <div class="marquee-item"><img src="assets/PMAL 4.jpeg" alt="PMAL 4" loading="lazy" onerror="this.src='assets/PMAL 4.jpg'; this.onerror=null;"></div>
+            <div class="marquee-item"><img src="assets/PMAL 5.jpeg" alt="PMAL 5" loading="lazy" onerror="this.src='assets/PMAL 5.jpg'; this.onerror=null;"></div>
+            
+            <!-- Set Gambar Kedua (Duplikat untuk putaran mulus tak terbatas) -->
+            <div class="marquee-item"><img src="assets/PMAL 1.jpeg" alt="PMAL 1" loading="lazy" onerror="this.src='assets/PMAL 1.jpg'; this.onerror=null;"></div>
+            <div class="marquee-item"><img src="assets/PMAL 2.jpeg" alt="PMAL 2" loading="lazy" onerror="this.src='assets/PMAL 2.jpg'; this.onerror=null;"></div>
+            <div class="marquee-item"><img src="assets/PMAL 3.jpeg" alt="PMAL 3" loading="lazy" onerror="this.src='assets/PMAL 3.jpg'; this.onerror=null;"></div>
+            <div class="marquee-item"><img src="assets/PMAL 4.jpeg" alt="PMAL 4" loading="lazy" onerror="this.src='assets/PMAL 4.jpg'; this.onerror=null;"></div>
+            <div class="marquee-item"><img src="assets/PMAL 5.jpeg" alt="PMAL 5" loading="lazy" onerror="this.src='assets/PMAL 5.jpg'; this.onerror=null;"></div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    
+    <div style="text-align: center; margin-top: 40px; margin-bottom: 40px;" class="reveal">
+      <a href="semester2.html" style="color: #aaa; text-decoration: none; font-size: 0.9rem; padding: 10px 20px; border: 1px solid rgba(255,255,255,0.2); border-radius: 50px;">← Kembali ke Daftar Mata Kuliah Semester 2</a>
+    </div>
+
+  </main>
+  
+  <div id="footer-placeholder"></div>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pembelajaran Sosial Emosional | E-Portofolio Refyan</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    /* CSS untuk merapikan kotak teks refleksi agar di tengah dan lebar */
+    .refleksi-box {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      background: var(--card-bg, rgba(255, 255, 255, 0.03));
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 35px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    /* CSS untuk wadah PDF agar Full, Center & Punya Border Menarik */
+    .pdf-section {
+      width: 100%;
+      max-width: 1000px;
+      margin: 50px auto 20px; 
+      padding-top: 40px;
+      border-top: 1px dashed rgba(255,255,255,0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .pdf-container {
+      width: 100%;
+      height: 75vh;
+      min-height: 500px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 2px solid rgba(74, 144, 226, 0.4);
+      background: rgba(0, 0, 0, 0.4);
+      box-shadow: 0 0 30px rgba(74, 144, 226, 0.15), inset 0 0 20px rgba(0,0,0,0.5);
+    }
+    .pdf-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* CSS untuk Live Auto-Slider (Marquee) yang mulus */
+    .slider-wrapper {
+      width: 100%;
+      max-width: 1000px;
+      margin: 50px auto;
+      text-align: center;
+    }
+    .marquee-container {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      padding: 10px 0;
+      mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+      -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    }
+    .marquee-track {
+      display: inline-block;
+      /* Durasi diperlambat (50s) karena ada 9 gambar agar rotasinya smooth */
+      animation: marquee 50s linear infinite;
+    }
+    .marquee-track:hover {
+      animation-play-state: paused;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .marquee-item {
+      display: inline-block;
+      width: 280px;
+      height: 180px;
+      margin: 0 10px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+    .marquee-item:hover {
+      transform: scale(1.05);
+    }
+    .marquee-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+  <main class="page">
+    <div class="grid-bg"></div>
+    <div class="orb one"></div>
+    <div class="orb two"></div>
+    
+    <!-- Header Section -->
+    <section class="container section" style="padding-top: 35px;">
+      <div class="section-head reveal">
+        <div>
+          <div class="kicker">Semester 2 • Mata Kuliah Inti</div>
+          <h2>Pembelajaran<br>Sosial Emosional.</h2>
+        </div>
+        <p>Menyadari bahwa kecerdasan emosional dan keterampilan sosial adalah fondasi utama keberhasilan akademis dan karakter siswa.</p>
+      </div>
+    </section>
+
+    <!-- Apa Itu PSE Section -->
+    <section class="container section">
+      <div class="cards" style="grid-template-columns: 1fr;">
+        <article class="card reveal">
+          <div class="card-num">TENTANG MATA KULIAH</div>
+          <h3>Apa Itu Pembelajaran Sosial Emosional?</h3>
+          <p style="margin-bottom: 10px;">
+            <b>Pembelajaran Sosial Emosional (PSE)</b> atau <i>Social Emotional Learning (SEL)</i> adalah proses di mana siswa dan guru memperoleh serta menerapkan pengetahuan, keterampilan, dan sikap untuk mengelola emosi, membangun relasi yang sehat, mengambil keputusan yang bertanggung jawab, serta merasakan dan menunjukkan empati kepada orang lain. PSE memandang bahwa sekolah bukan sekadar tempat transfer ilmu pengetahuan, melainkan ruang bertumbuh bagi karakter, kesehatan mental, dan kesejahteraan seluruh warga sekolah.
+          </p>
+          <p style="margin-bottom: 10px;">
+            Mata kuliah ini berfokus pada <b>5 Kompetensi Sosial Emosional (KSE)</b> menurut kerangka <b>CASEL</b> (<i>Collaborative for Academic, Social, and Emotional Learning</i>):
+          </p>
+          <ul style="margin: 0 0 15px 20px; line-height: 1.8; color: var(--text-muted, #ccc);">
+            <li><b>Kesadaran Diri</b> — mengenali emosi, kekuatan, dan nilai diri sendiri.</li>
+            <li><b>Manajemen Diri</b> — mengelola emosi dan perilaku, termasuk mengatasi stres.</li>
+            <li><b>Kesadaran Sosial</b> — berempati dan memahami perspektif orang lain.</li>
+            <li><b>Keterampilan Berelasi</b> — membangun dan memelihara hubungan yang sehat.</li>
+            <li><b>Pengambilan Keputusan yang Bertanggung Jawab</b> — membuat pilihan yang konstruktif dan etis.</li>
+          </ul>
+          <p style="margin-bottom: 0;">
+            Melalui mata kuliah ini, pendidik dilatih untuk menerapkan teknik <i>mindfulness</i> (kesadaran penuh) seperti teknik STOP (<i>Stop, Take a breath, Observe, Proceed</i>), serta mengintegrasikan praktik PSE ke dalam kegiatan belajar mengajar. Guru tidak hanya dituntut untuk mengenali emosi siswa, tetapi juga harus mampu mengelola kondisi sosial-emosional dirinya sendiri (<i>well-being</i>) agar dapat menciptakan iklim kelas yang aman, nyaman, dan inklusif.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Artefak Section -->
+    <section class="container section">
+      <div class="section-head reveal">
+        <div>
+          <div class="kicker">Dokumentasi Karya</div>
+          <h2>Artefak Pembelajaran.</h2>
+        </div>
+        <p>Kumpulan tugas, modul ajar terintegrasi, dan praktik penerapan PSE di lingkungan sekolah, tersusun per topik.</p>
+      </div>
+      <div class="cards">
+        
+        <!-- Topik 1 -->
+        <article class="card reveal">
+          <div class="card-num">TOPIK 01</div>
+          <h3>PSE Berdasar Kerangka CASEL</h3>
+          <p>Mengkaji konsep dasar Pembelajaran Sosial Emosional melalui kerangka <i>Collaborative for Academic, Social, and Emotional Learning</i> (CASEL) dan lima kompetensi intinya sebagai fondasi praktik PSE di sekolah.</p>
+          <a class="card-link" href="https://drive.google.com/drive/folders/1aVNx7vh2fdJlfDBDGeCjN-bCLsaNmlAc?usp=drive_link" target="_blank" rel="noopener">Buka Folder Topik 1 ↗</a>
+        </article>
+        
+        <!-- Topik 2 -->
+        <article class="card reveal delay-1">
+          <div class="card-num">TOPIK 02</div>
+          <h3>Peran Guru sebagai Teladan</h3>
+          <p>Mengkaji pentingnya <i>well-being</i> guru dan bagaimana guru mencontohkan keterampilan sosial emosional kepada siswa melalui perilaku, tutur kata, dan pengelolaan emosi di ruang kelas.</p>
+          <a class="card-link" href="https://drive.google.com/drive/folders/1e2bvyh-ntIXpsJG-AZ0a94u1Z7QsSlbW?usp=drive_link" target="_blank" rel="noopener">Buka Folder Topik 2 ↗</a>
+        </article>
+
+        <!-- Topik 3 -->
+        <article class="card reveal delay-2">
+          <div class="card-num">TOPIK 03</div>
+          <h3>Experiential Learning untuk PSE</h3>
+          <p>Merancang pembelajaran PSE berbasis pengalaman (<i>experiential learning</i>) — belajar melalui pengalaman langsung, refleksi, dan penerapan — agar kompetensi sosial emosional siswa tumbuh secara bermakna.</p>
+          <a class="card-link" href="https://drive.google.com/drive/folders/15w43T3dVS3L342qOO5KuChikaulX5V0A?usp=drive_link" target="_blank" rel="noopener">Buka Folder Topik 3 ↗</a>
+        </article>
+
+        <!-- Topik 4 -->
+        <article class="card reveal">
+          <div class="card-num">TOPIK 04</div>
+          <h3>School Wellbeing</h3>
+          <p>Menelaah kesejahteraan sekolah (<i>school wellbeing</i>): menciptakan iklim sekolah yang aman, nyaman, inklusif, dan suportif bagi siswa maupun guru sebagai prasyarat tumbuhnya PSE.</p>
+          <a class="card-link" href="https://drive.google.com/drive/folders/1NIiIlD1JnbRGw1NA06BEzq8yyl1KhOOG?usp=drive_link" target="_blank" rel="noopener">Buka Folder Topik 4 ↗</a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Refleksi Akhir Section -->
+    <section class="container section">
+      <div class="section-head reveal">
+        <div>
+          <div class="kicker">Evaluasi Diri</div>
+          <h2>Refleksi Pengalaman.</h2>
+        </div>
+        <p>Membangun jembatan hati sebelum membangun jembatan logika di ruang kelas.</p>
+      </div>
+
+      <!-- Teks Refleksi (Centered Box) -->
+      <div class="refleksi-box reveal">
+        <h3 style="color: #fff; font-size: 1.5rem; margin-bottom: 15px;">Makna Pembelajaran Bagi Saya</h3>
+        <p style="margin-bottom: 15px; line-height: 1.7; color: var(--text-muted, #ccc);">
+          Mempelajari Pembelajaran Sosial Emosional (PSE) adalah titik balik (<i>turning point</i>) bagi saya dalam memandang perilaku siswa. Sebelumnya, ketika ada siswa yang tidak fokus atau berulah di kelas, respons naluriah saya adalah menegur. Namun, PSE mengajarkan saya untuk melihat "gunung es" di balik perilaku tersebut. Siswa yang tidak bisa berkonsentrasi mungkin sedang berjuang dengan kecemasan, kelelahan, atau masalah di rumah.
+        </p>
+        <p style="margin-bottom: 0; line-height: 1.7; color: var(--text-muted, #ccc);">
+          Menerapkan teknik STOP (<i>Stop, Take a breath, Observe, Proceed</i>) terbukti sangat efektif untuk mengembalikan fokus siswa di tengah kepenatan belajar. Ke depannya, saya berkomitmen untuk selalu meluangkan waktu di awal pembelajaran guna mengecek "suhu emosi" siswa, karena saya yakin bahwa otak tidak akan bisa menyerap materi akademik dengan baik jika hati dan emosi mereka sedang tidak stabil. PSE telah mengajarkan saya untuk menjadi guru yang lebih empatik dan sabar.
+        </p>
+      </div>
+
+      <!-- PDF Viewer Section -->
+      <div class="pdf-section reveal delay-1">
+        <h3 style="color: #6fb3ff; font-size: 1rem; letter-spacing: 3px; margin-bottom: 25px; text-transform: uppercase;">✦ Dokumen Refleksi LK 2 ✦</h3>
+        <div class="pdf-container">
+          <!-- Link PDF diubah ke mode preview agar bisa embed -->
+          <iframe src="https://drive.google.com/file/d/10b28x_VEku9468lNdQvJukJKza-XIrXo/preview" allow="autoplay" loading="lazy"></iframe>
+        </div>
+        <div style="margin-top: 25px;">
+          <a class="btn primary" href="assets/Refleksi Pembelajaran Sosial Emosional.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 8px;">
+            <span>📄</span> Buka & Download PDF
+          </a>
+        </div>
+      </div>
+
+      <!-- Live Auto-Slider Foto (PSE 1 sampai PSE 9) -->
+      <div class="slider-wrapper reveal delay-2">
+        <h3 style="color: #fff; font-size: 1.2rem; margin-bottom: 5px;">Jejak Dokumentasi</h3>
+        <p style="color: #888; font-size: 0.9rem; margin-bottom: 20px;">Arahkan kursor untuk menghentikan gambar sementara.</p>
+        
+        <div class="marquee-container">
+          <div class="marquee-track">
+            <!-- Set Gambar Pertama (9 Gambar) -->
+            <div class="marquee-item"><img src="assets/PSE 1.jpeg" alt="PSE 1" loading="lazy" onerror="this.src='assets/PSE 1.jpg'; this.onerror=null;"></div>
+            <div class="marquee-item"><img src="assets/PSE 2.jpeg" alt="PSE 2" loading="lazy" onerror="this.src='assets/PSE 2.jpg'; this.onerror=null;"></div>
+            <div class="marquee-item"><img src="assets/PSE 3.jpeg" alt="PSE 3" loading="lazy" onerror="this.src='assets/PSE 3.jpg'; this.onerror=null;"></div>
+            <div class="marquee-item"><img src="assets/PSE 4.jpeg" alt="PSE 4" loading="lazy" onerror="this.src='assets/PSE 4.jpg'; this.onerror=null;"></div>
+            <div class="marquee-item"><img src="assets/PSE 5.jpeg" alt="PSE 5" loading="lazy" onerror="this.src='assets/PSE 5.jpg'; this.onerror=null;"></div>
+            <div class="marquee-item"><img src="assets/PSE 6.jpeg" alt="PSE 6" loading="lazy" onerror="this.src='assets/PSE 6.jpg'; this.onerror=null;"></div>
+            <div class="marquee-item"><img src="assets/PSE 7.jpeg" alt="PSE 7" loading="lazy" onerror="this.src='assets/PSE 7.jpg'; this.onerror=null;"></div>
+            <div class="marquee-item"><img src="assets/PSE 8.jpeg" alt="PSE 8" loading="lazy" onerror="this.src='assets/PSE 8.jpg'; this.onerror=null;"></div>
+            <div class="marquee-item"><img src="assets/PSE 9.jpeg" alt="PSE 9" loading="lazy" onerror="this.src='assets/PSE 9.jpg'; this.onerror=null;"></div>
+            
+            <!-- Set Gambar Kedua (Duplikat untuk efek putaran mulus tak terbatas) -->
+            <div class="marquee-item"><img src="assets/PSE 1.jpeg" alt="PSE 1" loading="lazy" onerror="this.src='assets/PSE 1.jpg'; this.onerror=null;"></div>
+            <div class="marquee-item"><img src="assets/PSE 2.jpeg" alt="PSE 2" loading="lazy" onerror="this.src='assets/PSE 2.jpg'; this.onerror=null;"></div>
+            <div class="marquee-item"><img src="assets/PSE 3.jpeg" alt="PSE 3" loading="lazy" onerror="this.src='assets/PSE 3.jpg'; this.onerror=null;"></div>
+            <div class="marquee-item"><img src="assets/PSE 4.jpeg" alt="PSE 4" loading="lazy" onerror="this.src='assets/PSE 4.jpg'; this.onerror=null;"></div>
+            <div class="marquee-item"><img src="assets/PSE 5.jpeg" alt="PSE 5" loading="lazy" onerror="this.src='assets/PSE 5.jpg'; this.onerror=null;"></div>
+            <div class="marquee-item"><img src="assets/PSE 6.jpeg" alt="PSE 6" loading="lazy" onerror="this.src='assets/PSE 6.jpg'; this.onerror=null;"></div>
+            <div class="marquee-item"><img src="assets/PSE 7.jpeg" alt="PSE 7" loading="lazy" onerror="this.src='assets/PSE 7.jpg'; this.onerror=null;"></div>
+            <div class="marquee-item"><img src="assets/PSE 8.jpeg" alt="PSE 8" loading="lazy" onerror="this.src='assets/PSE 8.jpg'; this.onerror=null;"></div>
+            <div class="marquee-item"><img src="assets/PSE 9.jpeg" alt="PSE 9" loading="lazy" onerror="this.src='assets/PSE 9.jpg'; this.onerror=null;"></div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    
+    <div style="text-align: center; margin-top: 40px; margin-bottom: 40px;" class="reveal">
+      <a href="semester2.html" style="color: #aaa; text-decoration: none; font-size: 0.9rem; padding: 10px 20px; border: 1px solid rgba(255,255,255,0.2); border-radius: 50px;">← Kembali ke Daftar Mata Kuliah Semester 2</a>
+    </div>
+
+  </main>
+  
+  <div id="footer-placeholder"></div>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

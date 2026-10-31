@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Siklus 2 | PPL Mandiri Refyan</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    .bg-overlay {
+      position: fixed; 
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      height: 100%; 
+      background: linear-gradient(to bottom, rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.97)), url('assets/UM 1.jpg') center/cover no-repeat fixed; 
+      z-index: -1;
+    }
+
+    .timeline-box {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto 35px auto;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    
+    .kicker-tag {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #34d399;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      border: 1px solid rgba(52, 211, 153, 0.3);
+      padding: 4px 10px;
+      border-radius: 50px;
+      background: rgba(52, 211, 153, 0.1);
+      text-transform: uppercase;
+    }
+
+    .data-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 15px;
+    }
+    .data-list li {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 14px;
+      color: #ddd;
+      line-height: 1.7;
+    }
+    .data-list li::before {
+      content: '✦';
+      position: absolute;
+      left: 0;
+      color: #34d399;
+    }
+    .highlight-text {
+      font-weight: bold;
+      color: #34d399;
+    }
+
+    /* CSS Penampil Video & Dokumen */
+    .media-section {
+      width: 100%;
+      max-width: 1000px;
+      margin: 50px auto 20px; 
+      padding-top: 40px;
+      border-top: 1px dashed rgba(255,255,255,0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .media-container {
+      width: 100%;
+      height: 70vh;
+      min-height: 450px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 2px solid rgba(52, 211, 153, 0.4);
+      background: rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 30px rgba(52, 211, 153, 0.15), inset 0 0 20px rgba(0,0,0,0.5);
+    }
+    .media-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background: #111;
+    }
+
+    /* === Image Slider (Kegiatan Non-Mengajar) === */
+    .slider-wrap { margin-top: 30px; }
+    .slider-container {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 2px solid rgba(52, 211, 153, 0.4);
+      background: rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 30px rgba(52, 211, 153, 0.15);
+    }
+    .slider-track {
+      display: flex;
+      height: 100%;
+      transition: transform 0.5s ease;
+      will-change: transform;
+    }
+    .slider-slide {
+      min-width: 100%;
+      height: 100%;
+      position: relative;
+    }
+    .slider-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      user-select: none;
+    }
+    .slider-caption {
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      padding: 40px 15px 28px;
+      background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0));
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      pointer-events: none;
+    }
+    .slider-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 42px; height: 42px;
+      border-radius: 50%;
+      background: rgba(0,0,0,0.55);
+      color: #fff;
+      border: 1px solid rgba(52, 211, 153, 0.5);
+      cursor: pointer;
+      font-size: 22px;
+      line-height: 1;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s ease;
+      z-index: 5;
+    }
+    .slider-btn:hover { background: rgba(16, 185, 129, 0.85); }
+    .slider-btn.prev { left: 10px; }
+    .slider-btn.next { right: 10px; }
+    .slider-dots {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 6px;
+      z-index: 5;
+    }
+    .slider-dots span {
+      width: 9px; height: 9px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.45);
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .slider-dots span.active { background: #34d399; }
+
+    @media (max-width: 640px) {
+      .timeline-box { padding: 25px 18px; }
+      .slider-btn { width: 36px; height: 36px; font-size: 18px; }
+      .slider-caption { font-size: 0.8rem; padding: 30px 12px 24px; }
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+  <main class="page" style="opacity: 1 !important; visibility: visible !important;">
+    
+    <div class="bg-overlay" id="custom-bg"></div>
+    <div class="orb one"></div>
+    <div class="orb three"></div>
+    
+    <!-- Header Section -->
+    <section class="container section" style="padding-top: 35px; padding-bottom: 20px;">
+      <div class="section-head">
+        <div>
+          <div class="kicker" style="color: #34d399;">Praktik Lapangan • PPL Mandiri</div>
+          <h2>Siklus 2<br>Analisis & Implementasi.</h2>
+        </div>
+        <p>Dokumentasi lengkap dan analisis komprehensif perangkat pembelajaran pada Siklus 2 di kelas VII F SMP Negeri 18 Malang.</p>
+      </div>
+    </section>
+
+    <section class="container section" style="padding-top: 0;">
+      
+      <!-- 1. Analisis Modul Ajar -->
+      <div class="timeline-box">
+        <div class="kicker-tag">01 • Modul Ajar</div>
+        <h3 style="color: #fff; font-size: 1.4rem; margin-bottom: 15px;">Desain Pembelajaran Berbasis Discovery Learning & PSE</h3>
+        <p style="margin-bottom: 10px; line-height: 1.7; color: #ccc;">
+          Modul Ajar Siklus 2 disusun dengan mengintegrasikan model <b>Discovery Learning</b>, pendekatan <i>Deep Learning</i>, serta Pembelajaran Sosial Emosional (PSE). Fokus materi berpusat pada pemahaman sistem komputer (hardware, software, dan brainware) serta alur kerja komputasional di kelas VII F SMPN 18 Malang[cite: 26].
+        </p>
+        <ul class="data-list">
+          <li><span class="highlight-text">Tujuan Pembelajaran:</span> Siswa mampu menjelaskan pengertian sistem komputer, mengidentifikasi komponen utama (perangkat keras, perangkat lunak, dan pengguna), serta menganalisis alur kerja <i>input → process → output → storage</i>[cite: 26].</li>
+          <li><span class="highlight-text">Integrasi PSE & Profil Pelajar Pancasila:</span> Memuat teknik STOP untuk kesadaran diri, manajemen waktu kelompok, serta membangun dimensi Profil Pelajar Pancasila (Bernalar Kritis, Gotong Royong, Kreatif, dan Mandiri)[cite: 26].</li>
+          <li><span class="highlight-text">Asesmen Komprehensif:</span> Penilaian mencakup asesmen formatif proses diskusi kelompok, unjuk kerja LKPD, lembar refleksi emosi (morning meeting), hingga instrumen penilaian sikap dan keterampilan[cite: 26].</li>
+        </ul>
+        <div style="margin-top: 20px;">
+          <a class="btn primary" href="https://drive.google.com/drive/folders/13uyuvV98C04cBuq4nmPio43cfTAKohyd?usp=drive_link" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #10b981; color: #fff; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600;">
+            <span>📁</span> Akses Folder Modul Ajar Siklus 2
+          </a>
+        </div>
+      </div>
+
+      <!-- 2. Analisis Media Pembelajaran -->
+      <div class="timeline-box">
+        <div class="kicker-tag">02 • Media Pembelajaran</div>
+        <h3 style="color: #fff; font-size: 1.4rem; margin-bottom: 15px;">Media Visual Interaktif & Presentasi Kontekstual</h3>
+        <p style="margin-bottom: 10px; line-height: 1.7; color: #ccc;">
+          Media pembelajaran dikembangkan untuk merangsang minat visual dan pemahaman konsep abstrak siswa secara konkret:
+        </p>
+        <ul class="data-list">
+          <li><span class="highlight-text">PowerPoint Interaktif:</span> Menyajikan ilustrasi visual grafis perangkat keras (CPU, RAM, Motherboard, Storage, GPU, PSU), klasifikasi perangkat lunak (Sistem Operasi & Aplikasi), serta diagram alur kerja komputer yang mudah dipahami[cite: 25].</li>
+          <li><span class="highlight-text">Pendekatan Kontekstual:</span> Menggunakan analogi aktivitas sehari-hari yang dekat dengan kehidupan siswa untuk menjembatani pemahaman fungsi hardware, software, dan brainware[cite: 25, 26].</li>
+        </ul>
+        <div style="margin-top: 20px;">
+          <a class="btn primary" href="https://drive.google.com/drive/folders/1dySmYFKK1vjLcW0ki2OZ8-8TsT6m_cMo?usp=drive_link" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #10b981; color: #fff; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600;">
+            <span>💻</span> Akses Folder Media Pembelajaran Siklus 2
+          </a>
+        </div>
+      </div>
+
+      <!-- 3. Analisis LKPD -->
+      <div class="timeline-box">
+        <div class="kicker-tag">03 • Lembar Kerja (LKPD)</div>
+        <h3 style="color: #fff; font-size: 1.4rem; margin-bottom: 15px;">Eksplorasi Sistem Komputer & Alur Kerja</h3>
+        <p style="margin-bottom: 10px; line-height: 1.7; color: #ccc;">
+          LKPD dirancang secara terstruktur dengan studi kasus nyata untuk melatih kemampuan berpikir kritis dan kolaborasi:
+        </p>
+        <ul class="data-list">
+          <li><span class="highlight-text">Kegiatan 1 & 2 (Identifikasi & Fungsi Komponen):</span> Siswa mengamati gambar unit komputer fisik, menunjuk komponen bernomor (1-6), serta menguraikan fungsi masing-masing komponen[cite: 22].</li>
+          <li><span class="highlight-text">Kegiatan 3 & 4 (Alur Kerja & Analisis Hubungan):</span> Melengkapi diagram alur kerja <i>Input → Process → Output → Storage</i> serta menganalisis kerja sama antar-komponen dalam menyelesaikan tugas komputer sehari-hari di sekolah[cite: 22].</li>
+        </ul>
+        <div style="margin-top: 20px;">
+          <a class="btn primary" href="https://drive.google.com/drive/folders/1nOkVNwf49qyh8X4ZL0e_UcX32nlMdBgn?usp=drive_link" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #10b981; color: #fff; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600;">
+            <span>📝</span> Akses Folder LKPD Siklus 2
+          </a>
+        </div>
+      </div>
+
+      <!-- 4. Video Pelaksanaan Siklus 2 -->
+      <div class="media-section">
+        <h3 style="color: #34d399; font-size: 1.1rem; letter-spacing: 2px; margin-bottom: 25px; text-transform: uppercase;">✦ Video Pelaksanaan Pembelajaran Siklus 2 ✦</h3>
+        <div class="media-container">
+          <iframe src="https://drive.google.com/file/d/1FZiK8vshFhl2w3kiotj-ECEpH0bQZPZm/preview" allow="autoplay" loading="lazy"></iframe>
+        </div>
+        <div style="margin-top: 25px;">
+          <a class="btn primary" href="https://drive.google.com/file/d/1FZiK8vshFhl2w3kiotj-ECEpH0bQZPZm/view?usp=drive_link" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #3b82f6; color: #fff; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600;">
+            <span>🎥</span> Tonton / Download Video Lengkap di Drive
+          </a>
+        </div>
+      </div>
+
+      <!-- 5. Analisis Kegiatan Non-Mengajar -->
+      <div class="timeline-box" style="margin-top: 50px;">
+        <div class="kicker-tag">04 • Kegiatan Non-Mengajar</div>
+        <h3 style="color: #fff; font-size: 1.4rem; margin-bottom: 15px;">Aktivitas Pendukung & Penguatan Peran di Lingkungan Sekolah</h3>
+        <p style="margin-bottom: 10px; line-height: 1.7; color: #ccc;">
+          Selain praktik mengajar di kelas, mahasiswa PPL Mandiri juga terlibat aktif dalam berbagai kegiatan non-mengajar sebagai bagian dari penguatan kompetensi sosial dan keprofesian. Kegiatan ini membangun kedekatan dengan warga sekolah, melatih kedisiplinan, serta memberikan kontribusi nyata terhadap program sekolah.
+        </p>
+        <ul class="data-list">
+          <li><span class="highlight-text">Kunjungan DPL (Dosen Pembimbing Lapangan):</span> Monitoring dan evaluasi berkala untuk memastikan kualitas pelaksanaan PPL, sekaligus menerima masukan konstruktif terkait praktik kependidikan.</li>
+          <li><span class="highlight-text">Upacara 17 Agustus:</span> Partisipasi dalam upacara peringatan HUT Kemerdekaan RI bersama seluruh warga sekolah sebagai wujud nasionalisme dan kedisiplinan.</li>
+          <li><span class="highlight-text">Jalan Sehat Dies Natalis Sekolah:</span> Mengikuti kegiatan jalan sehat dalam rangka memeriahkan dies natalis sekolah, mempererat kebersamaan antarguru, siswa, dan mahasiswa PPL.</li>
+          <li><span class="highlight-text">Seleksi Murid untuk Lomba Coding:</span> Membantu guru dalam mengidentifikasi dan menyeleksi siswa berbakat untuk mewakili sekolah dalam kompetisi coding tingkat kota/provinsi.</li>
+          <li><span class="highlight-text">Piket Keliling Absensi:</span> Bertugas keliling kelas untuk mengisi absensi siswa secara langsung, melatih ketelitian dan tanggung jawab administratif.</li>
+          <li><span class="highlight-text">Standby di Ruang Piket:</span> Berjaga di ruang piket untuk membantu administrasi sekolah, menerima tamu, dan merespons kebutuhan mendesak warga sekolah.</li>
+          <li><span class="highlight-text">Menyambut Siswa dengan 5S:</span> Menyambut siswa di gerbang sekolah dengan <i>Senyum, Sapa, Salam, Sopan, Santun</i> (5S) untuk menciptakan suasana positif di awal pembelajaran.</li>
+        </ul>
+        <p style="margin-top: 15px; line-height: 1.7; color: #bbb; font-style: italic;">
+          <b style="color:#34d399; font-style: normal;">Refleksi:</b> Kegiatan-kegiatan tersebut menumbuhkan soft skill seperti tanggung jawab, komunikasi, dan kolaborasi yang tidak didapatkan di ruang kelas. Mahasiswa PPL belajar memahami budaya sekolah, membangun relasi lintas peran, serta berkontribusi pada ekosistem pendidikan secara menyeluruh.
+        </p>
+
+        <!-- Image Slider Auto -->
+        <div class="slider-wrap">
+          <div class="slider-container" id="nmSlider">
+            <div class="slider-track" id="nmTrack">
+              <div class="slider-slide">
+                <img src="assets/NM%20(1).jpeg" alt="Kunjungan DPL" decoding="async">
+                <div class="slider-caption">1. Kunjungan Dosen Pembimbing Lapangan (DPL)</div>
+              </div>
+              <div class="slider-slide">
+                <img src="assets/NM%20(2).jpeg" alt="Upacara 17 Agustus" loading="lazy" decoding="async">
+                <div class="slider-caption">2. Upacara 17 Agustus di Sekolah</div>
+              </div>
+              <div class="slider-slide">
+                <img src="assets/NM%20(3).jpeg" alt="Jalan Sehat Dies Natalis" loading="lazy" decoding="async">
+                <div class="slider-caption">3. Jalan Sehat Dies Natalis Sekolah</div>
+              </div>
+              <div class="slider-slide">
+                <img src="assets/NM%20(4).jpeg" alt="Seleksi Lomba Coding" loading="lazy" decoding="async">
+                <div class="slider-caption">4. Seleksi Murid untuk Lomba Coding</div>
+              </div>
+              <div class="slider-slide">
+                <img src="assets/NM%20(5).jpeg" alt="Piket Keliling Absensi" loading="lazy" decoding="async">
+                <div class="slider-caption">5. Piket Keliling Absensi</div>
+              </div>
+              <div class="slider-slide">
+                <img src="assets/NM%20(6).jpeg" alt="Standby Ruang Piket" loading="lazy" decoding="async">
+                <div class="slider-caption">6. Standby di Ruang Piket</div>
+              </div>
+              <div class="slider-slide">
+                <img src="assets/NM%20(7).jpeg" alt="Menyambut Siswa 5S" loading="lazy" decoding="async">
+                <div class="slider-caption">7. Menyambut Siswa dengan 5S</div>
+              </div>
+            </div>
+            <button class="slider-btn prev" id="nmPrev" aria-label="Sebelumnya">‹</button>
+            <button class="slider-btn next" id="nmNext" aria-label="Berikutnya">›</button>
+            <div class="slider-dots" id="nmDots"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Logbook Mingguan -->
+      <div class="timeline-box">
+        <div class="kicker-tag">05 • Logbook Mingguan</div>
+        <h3 style="color: #fff; font-size: 1.4rem; margin-bottom: 15px;">Rekam Jejak Pelaksanaan PPL Mandiri</h3>
+        <p style="margin-bottom: 10px; line-height: 1.7; color: #ccc;">
+          Logbook mingguan merupakan dokumentasi harian pelaksanaan PPL Mandiri di SMPN 18 Malang. Di dalamnya memuat catatan kegiatan mengajar, non-mengajar, refleksi harian, serta dokumentasi pendukung sebagai bukti pertanggungjawaban profesional mahasiswa praktikan.
+        </p>
+        <div style="margin-top: 20px;">
+          <a class="btn primary" href="https://drive.google.com/drive/folders/1o5ScBNZ7NrwJeM6Og6VW4yYX41G2AqMQ?usp=drive_link" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #10b981; color: #fff; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600;">
+            <span>📒</span> Akses Folder Logbook Mingguan PPL
+          </a>
+        </div>
+      </div>
+      
+    </section>
+    
+    <div style="text-align: center; margin-top: 20px; margin-bottom: 50px;">
+      <a href="portofolio-ppl-mandiri.html" style="color: #aaa; text-decoration: none; font-size: 0.9rem; padding: 10px 20px; border: 1px solid rgba(255,255,255,0.2); border-radius: 50px; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='transparent'">← Kembali ke Menu PPL Mandiri</a>
+    </div>
+
+  </main>
+  
+  <div id="footer-placeholder"></div>
+  <script src="data.js"></script>
+
+  <!-- Image Slider Script -->
+  <script>
+    (function () {
+      function initSlider() {
+        var track = document.getElementById('nmTrack');
+        var dotsContainer = document.getElementById('nmDots');
+        if (!track || !dotsContainer) return;
+
+        var slides = track.children;
+        var total = slides.length;
+        if (total === 0) return;
+
+        var current = 0;
+        var timer = null;
+        var INTERVAL = 4000;
+
+        for (var i = 0; i < total; i++) {
+          (function (idx) {
+            var dot = document.createElement('span');
+            if (idx === 0) dot.classList.add('active');
+            dot.addEventListener('click', function () { goTo(idx); restart(); });
+            dotsContainer.appendChild(dot);
+          })(i);
+        }
+        var dots = dotsContainer.querySelectorAll('span');
+
+        function goTo(i) {
+          current = (i + total) % total;
+          track.style.transform = 'translateX(-' + (current * 100) + '%)';
+          for (var j = 0; j < dots.length; j++) {
+            dots[j].classList.toggle('active', j === current);
+          }
+        }
+        function restart() {
+          if (timer) clearInterval(timer);
+          timer = setInterval(function () { goTo(current + 1); }, INTERVAL);
+        }
+
+        var prevBtn = document.getElementById('nmPrev');
+        var nextBtn = document.getElementById('nmNext');
+        if (prevBtn) prevBtn.addEventListener('click', function () { goTo(current - 1); restart(); });
+        if (nextBtn) nextBtn.addEventListener('click', function () { goTo(current + 1); restart(); });
+
+        var container = document.getElementById('nmSlider');
+        if (container) {
+          container.addEventListener('mouseenter', function () { if (timer) clearInterval(timer); });
+          container.addEventListener('mouseleave', restart);
+        }
+
+        restart();
+
+        // Preload images 2-7 setelah window load → transisi halus tanpa memperlambat initial load
+        window.addEventListener('load', function () {
+          for (var k = 2; k <= 7; k++) {
+            var img = new Image();
+            img.src = 'assets/NM%20(' + k + ').jpeg';
+          }
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initSlider);
+      } else {
+        initSlider();
+      }
+    })();
+  </script>
+</body>
+</html>

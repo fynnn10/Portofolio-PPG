@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Inovasi | E-Portofolio Refyan</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    /* Kotak konten utama untuk section inovasi */
+    .timeline-box {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto 30px auto;
+      background: var(--card-bg, rgba(255, 255, 255, 0.03));
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    
+    .kicker-tag {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #6fb3ff;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      border: 1px solid rgba(111, 179, 255, 0.3);
+      padding: 4px 10px;
+      border-radius: 50px;
+      background: rgba(111, 179, 255, 0.1);
+      text-transform: uppercase;
+    }
+
+    /* List Analisis Angket */
+    .data-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 15px;
+    }
+    .data-list li {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 12px;
+      color: #ddd;
+      line-height: 1.6;
+    }
+    .data-list li::before {
+      content: '✦';
+      position: absolute;
+      left: 0;
+      color: #6fb3ff;
+    }
+    .highlight-score {
+      font-weight: bold;
+      color: #4ae290;
+    }
+
+    /* CSS Penampil PDF */
+    .pdf-section {
+      width: 100%;
+      max-width: 1000px;
+      margin: 50px auto 20px; 
+      padding-top: 40px;
+      border-top: 1px dashed rgba(255,255,255,0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .pdf-container {
+      width: 100%;
+      height: 75vh;
+      min-height: 500px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 2px solid rgba(111, 179, 255, 0.4);
+      background: rgba(0, 0, 0, 0.4);
+      box-shadow: 0 0 30px rgba(111, 179, 255, 0.15), inset 0 0 20px rgba(0,0,0,0.5);
+    }
+    .pdf-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background: #111; /* Warna dasar saat iframe belum dimuat */
+    }
+
+    /* CSS Marquee / Slider Foto */
+    .slider-wrapper {
+      width: 100%;
+      max-width: 1000px;
+      margin: 50px auto;
+      text-align: center;
+    }
+    .marquee-container {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      padding: 15px 0;
+      mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+      -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    }
+    .marquee-track {
+      display: inline-block;
+      animation: marquee 25s linear infinite;
+    }
+    .marquee-track:hover {
+      animation-play-state: paused;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .marquee-item {
+      display: inline-block;
+      width: 280px;
+      height: 180px;
+      margin: 0 10px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+    .marquee-item:hover {
+      transform: scale(1.05);
+    }
+    .marquee-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+  <main class="page">
+    <div class="grid-bg"></div>
+    <div class="orb one"></div>
+    <div class="orb three"></div>
+    
+    <!-- Header Section -->
+    <section class="container section" style="padding-top: 35px; padding-bottom: 20px;">
+      <div class="section-head reveal">
+        <div>
+          <div class="kicker" style="color: #6fb3ff;">Desain Karya Inovatif</div>
+          <h2>Media AR Interaktif<br>Sistem Komputer.</h2>
+        </div>
+        <p>Membawa objek 3D ke dunia nyata untuk memfasilitasi pemahaman anatomi komputer secara imersif melalui platform Assembler Edu.</p>
+      </div>
+    </section>
+
+    <section class="container section" style="padding-top: 0;">
+      
+      <!-- 1. Kebutuhan dan Tantangan -->
+      <div class="timeline-box reveal">
+        <div class="kicker-tag">01 • Latar Belakang</div>
+        <h3 style="color: #fff; font-size: 1.4rem; margin-bottom: 15px;">Kebutuhan Eksplorasi Tanpa Risiko</h3>
+        <p style="margin-bottom: 10px; line-height: 1.7; color: var(--text-muted, #ccc);">
+          Berdasarkan observasi di kelas VII F SMP Negeri 18 Malang, siswa lebih mudah memahami materi jika dikaitkan dengan pengalaman visual dan praktik nyata. Namun, tantangan utama yang dihadapi adalah <b>keterbatasan perangkat keras (hardware) fisik</b> yang bisa dibongkar-pasang, serta tingginya risiko kerusakan jika dieksplorasi langsung oleh 32 siswa secara bersamaan.
+        </p>
+        <p style="margin-bottom: 0; line-height: 1.7; color: var(--text-muted, #ccc);">
+          Siswa sangat membutuhkan visualisasi konkret untuk memahami anatomi komponen bagian dalam komputer (seperti posisi <i>motherboard</i> di dalam <i>casing</i> CPU) agar mampu membedakan perangkat <i>input, process, output</i>, dan <i>storage</i> dengan tepat.
+        </p>
+      </div>
+
+      <!-- 2. Gagasan Inovasi -->
+      <div class="timeline-box reveal delay-1">
+        <div class="kicker-tag">02 • Gagasan & Desain</div>
+        <h3 style="color: #fff; font-size: 1.4rem; margin-bottom: 15px;">Augmented Reality Berbasis Marker</h3>
+        <p style="margin-bottom: 10px; line-height: 1.7; color: var(--text-muted, #ccc);">
+          Sebagai solusi, saya merancang inovasi media <b>Augmented Reality (AR) Interaktif</b> menggunakan platform <b>Assembler Edu</b>. Inovasi ini bekerja dengan cara memproyeksikan objek 3D komponen komputer secara virtual langsung di atas meja siswa, hanya dengan memindai <i>marker</i> (kode penanda khusus di kertas LKPD) menggunakan kamera ponsel mereka.
+        </p>
+        <p style="margin-bottom: 0; line-height: 1.7; color: var(--text-muted, #ccc);">
+          Kebaruan inovasi ini terletak pada penggabungan <i>spatial computing</i> yang imersif dan kemudahan aksesibilitas. Siswa tidak perlu kacamata VR yang mahal; cukup dengan ponsel pintar dan kertas ber-<i>marker</i> cetak hitam-putih yang sangat murah. Pendekatan ini memungkinkan siswa melakukan "bedah CPU virtual" secara aman (<i>Experiential Learning</i>) sembari mendiskusikan fungsinya bersama teman sebangku.
+        </p>
+      </div>
+
+      <!-- 3. Implementasi & Evaluasi -->
+      <div class="timeline-box reveal delay-2">
+        <div class="kicker-tag">03 • Implementasi & Hasil Analisis</div>
+        <h3 style="color: #fff; font-size: 1.4rem; margin-bottom: 15px;">Sintaks Discovery Learning & Umpan Balik Siswa</h3>
+        <p style="margin-bottom: 15px; line-height: 1.7; color: var(--text-muted, #ccc);">
+          Inovasi ini telah diimplementasikan pada pertemuan ke-8 di kelas VII F SMPN 18 Malang melalui model <i>Discovery Learning</i>. Siswa secara berkolaborasi memindai marker, memutar objek 3D 360 derajat, mengamati <i>tooltips</i> penjelasan di setiap komponen, dan menyusun alur <i>input-process-output</i> di Lembar Kerja.
+        </p>
+        <p style="margin-bottom: 5px; line-height: 1.7; font-weight: bold; color: #fff;">
+          Hasil Analisis Data Kuesioner (23 Responden Siswa VII F):
+        </p>
+        <ul class="data-list">
+          <li>Siswa merasa sangat antusias dan senang bisa melihat bagian dalam casing komputer secara 3D <span class="highlight-score">(Rata-rata Skor: 4.04 / 5.00)</span>.</li>
+          <li>Siswa menilai bahwa belajar sistem komputer dengan AR sangat bermanfaat bagi pemahaman mereka <span class="highlight-score">(Rata-rata Skor: 4.08 / 5.00)</span>.</li>
+          <li>Siswa merasa puas dengan pengalaman belajar baru ini secara keseluruhan <span class="highlight-score">(Rata-rata Skor: 4.00 / 5.00)</span>.</li>
+          <li>Siswa menyatakan sangat ingin menggunakan media AR lagi pada materi Informatika berikutnya <span class="highlight-score">(Rata-rata Skor: 4.08 / 5.00)</span>.</li>
+        </ul>
+        <p style="margin-top: 15px; line-height: 1.7; color: var(--text-muted, #ccc);">
+          Data di atas membuktikan bahwa penggunaan inovasi media AR berbasis marker efektif memecahkan keterbatasan alat peraga, sekaligus memacu motivasi belajar yang tinggi.
+        </p>
+      </div>
+
+      <!-- Live Auto-Slider Foto Inovasi -->
+      <div class="slider-wrapper reveal">
+        <h3 style="color: #fff; font-size: 1.2rem; margin-bottom: 5px;">Dokumentasi Penggunaan Inovasi</h3>
+        <p style="color: #888; font-size: 0.9rem; margin-bottom: 20px;">Arahkan kursor untuk menghentikan gambar sementara.</p>
+        
+        <div class="marquee-container">
+          <div class="marquee-track">
+            <div class="marquee-item"><img src="assets/Inovasi (1).png" alt="Inovasi 1" onerror="this.src='assets/Inovasi (1).jpg'; this.onerror=null;"></div>
+            <div class="marquee-item"><img src="assets/Inovasi (2).png" alt="Inovasi 2" onerror="this.src='assets/Inovasi (2).jpg'; this.onerror=null;"></div>
+            <div class="marquee-item"><img src="assets/Inovasi (3).png" alt="Inovasi 3" onerror="this.src='assets/Inovasi (3).jpg'; this.onerror=null;"></div>
+            <div class="marquee-item"><img src="assets/Inovasi (4).png" alt="Inovasi 4" onerror="this.src='assets/Inovasi (4).jpg'; this.onerror=null;"></div>
+            
+            <div class="marquee-item"><img src="assets/Inovasi (1).png" alt="Inovasi 1" onerror="this.src='assets/Inovasi (1).jpg'; this.onerror=null;"></div>
+            <div class="marquee-item"><img src="assets/Inovasi (2).png" alt="Inovasi 2" onerror="this.src='assets/Inovasi (2).jpg'; this.onerror=null;"></div>
+            <div class="marquee-item"><img src="assets/Inovasi (3).png" alt="Inovasi 3" onerror="this.src='assets/Inovasi (3).jpg'; this.onerror=null;"></div>
+            <div class="marquee-item"><img src="assets/Inovasi (4).png" alt="Inovasi 4" onerror="this.src='assets/Inovasi (4).jpg'; this.onerror=null;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Dokumen Refleksi PDF -->
+      <div class="pdf-section reveal delay-1">
+        <h3 style="color: #6fb3ff; font-size: 1rem; letter-spacing: 3px; margin-bottom: 25px; text-transform: uppercase;">✦ Dokumen Refleksi Inovasi ✦</h3>
+        <div class="pdf-container">
+          <!-- Modifikasi: Menggunakan data-src agar tidak langsung diload -->
+          <iframe id="pdf-frame" data-src="https://drive.google.com/file/d/1R0I2Uc4DxTErRTQaPfzbxlC9EZo6qH4d/preview" allow="autoplay" loading="lazy"></iframe>
+        </div>
+        <div style="margin-top: 25px;">
+          <a class="btn primary" href="assets/Refleksi Inovasi.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 8px;">
+            <span>📄</span> Buka & Download PDF
+          </a>
+        </div>
+      </div>
+      
+    </section>
+  </main>
+  
+  <div id="footer-placeholder"></div>
+  
+  <!-- Script penundaan load iframe PDF -->
+  <script>
+    // Memastikan PDF baru dimuat SETELAH halaman web selesai di-render
+    window.addEventListener("load", function() {
+      setTimeout(function() {
+        var iframe = document.getElementById("pdf-frame");
+        if(iframe) {
+          iframe.src = iframe.getAttribute("data-src");
+        }
+      }, 1500); // Memberi jeda 1.5 detik setelah loading screen hilang
+    });
+  </script>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

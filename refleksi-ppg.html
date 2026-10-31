@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Refleksi Akhir PPG | E-Portofolio Refyan</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    /* Kotak konten utama untuk setiap section */
+    .timeline-box {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto 50px auto;
+      background: var(--card-bg, rgba(255, 255, 255, 0.03));
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    
+    .timeline-num {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #9b51e0;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      border: 1px solid rgba(155, 81, 224, 0.3);
+      padding: 4px 10px;
+      border-radius: 50px;
+      background: rgba(155, 81, 224, 0.1);
+    }
+
+    /* CSS Penampil PDF */
+    .pdf-section {
+      width: 100%;
+      max-width: 1000px;
+      margin: 60px auto 20px; 
+      padding-top: 40px;
+      border-top: 1px dashed rgba(255,255,255,0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .pdf-container {
+      width: 100%;
+      height: 75vh;
+      min-height: 500px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 2px solid rgba(155, 81, 224, 0.4);
+      background: rgba(0, 0, 0, 0.4);
+      box-shadow: 0 0 30px rgba(155, 81, 224, 0.15), inset 0 0 20px rgba(0,0,0,0.5);
+    }
+    .pdf-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background: #111; 
+    }
+
+    /* CSS Marquee / Slider Foto */
+    .marquee-container {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      padding: 15px 0 5px 0;
+      margin-top: 25px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+      -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    }
+    .marquee-track {
+      display: inline-block;
+      animation: marquee 35s linear infinite;
+    }
+    .marquee-track:hover {
+      animation-play-state: paused;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .marquee-item {
+      display: inline-block;
+      width: 250px;
+      height: 160px;
+      margin: 0 10px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+    .marquee-item:hover {
+      transform: scale(1.05);
+    }
+    .marquee-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+  <main class="page">
+    <div class="grid-bg"></div>
+    <div class="orb one"></div>
+    <div class="orb three"></div>
+    
+    <!-- Header Section -->
+    <section class="container section" style="padding-top: 35px; padding-bottom: 20px;">
+      <div class="section-head reveal">
+        <div>
+          <div class="kicker" style="color: #c489ff;">E-Portofolio • Kesimpulan</div>
+          <h2>Refleksi<br>Perjalanan PPG.</h2>
+        </div>
+        <p>Rekam jejak komprehensif transformasi diri dari awal orientasi hingga penyelesaian program Pendidikan Profesi Guru.</p>
+      </div>
+    </section>
+
+    <section class="container section" style="padding-top: 0;">
+      
+      <!-- 1. Orientasi -->
+      <div class="timeline-box reveal">
+        <div class="timeline-num">01 • ORIENTASI</div>
+        <h3 style="color: #fff; font-size: 1.4rem; margin-bottom: 15px;">Langkah Awal Menjadi Pendidik Profesional</h3>
+        <p style="margin-bottom: 10px; line-height: 1.7; color: var(--text-muted, #ccc);">
+          Kegiatan Orientasi atau Pengenalan Kehidupan Kampus bagi Mahasiswa Baru (PKKMB) PPG adalah gerbang pembuka yang mengenalkan visi, misi, dan alur pelaksanaan Pendidikan Profesi Guru. Melalui kegiatan ini, kami dibekali dengan pemahaman arah kebijakan Kurikulum Merdeka dan pentingnya peran guru transformatif.
+        </p>
+        <p style="margin-bottom: 0; line-height: 1.7; color: var(--text-muted, #ccc);">
+          Pengalaman orientasi ini menumbuhkan semangat kebersamaan dan meneguhkan niat saya. Bertemu dengan rekan-rekan sejawat dari berbagai latar belakang menyadarkan saya bahwa kami berada di kapal yang sama untuk memajukan pendidikan Indonesia.
+        </p>
+        <div class="marquee-container">
+          <div class="marquee-track">
+            <!-- Menambahkan atribut loading="lazy" pada semua gambar -->
+            <div class="marquee-item"><img src="assets/PKKMB 1.jpeg" alt="Orientasi" loading="lazy" onerror="this.src='assets/PKKMB 1.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PKKMB 2.jpeg" alt="Orientasi" loading="lazy" onerror="this.src='assets/PKKMB 2.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PKKMB 3.jpeg" alt="Orientasi" loading="lazy" onerror="this.src='assets/PKKMB 3.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PKKMB 1.jpeg" alt="Orientasi" loading="lazy" onerror="this.src='assets/PKKMB 1.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PKKMB 2.jpeg" alt="Orientasi" loading="lazy" onerror="this.src='assets/PKKMB 2.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PKKMB 3.jpeg" alt="Orientasi" loading="lazy" onerror="this.src='assets/PKKMB 3.jpg';"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Perkuliahan Semester 1 -->
+      <div class="timeline-box reveal">
+        <div class="timeline-num">02 • SEMESTER 1</div>
+        <h3 style="color: #fff; font-size: 1.4rem; margin-bottom: 15px;">Fondasi Pedagogik dan Kerangka Berpikir</h3>
+        <p style="margin-bottom: 10px; line-height: 1.7; color: var(--text-muted, #ccc);">
+          Perkuliahan semester pertama difokuskan pada penguatan fondasi teoritis dan pedagogik. Saya menempuh lima mata kuliah inti: Filosofi Pendidikan, Pemahaman Peserta Didik dan Pembelajarannya, Pembelajaran Mendalam, Growth Mindset, dan Computational Thinking, ditambah dengan PPL Terbimbing.
+        </p>
+        <p style="margin-bottom: 0; line-height: 1.7; color: var(--text-muted, #ccc);">
+          Pengalaman di semester ini benar-benar merombak kerangka berpikir saya. Dari yang awalnya berfokus pada sisi teknis pengajaran Informatika, saya belajar melihat siswa sebagai individu yang unik, pentingnya <i>problem-solving</i> berbasis logika, serta merancang pembelajaran yang diferensiatif dan berpihak pada murid.
+        </p>
+        <div class="marquee-container">
+          <div class="marquee-track">
+            <div class="marquee-item"><img src="assets/PMAD 1.jpeg" alt="Semester 1" loading="lazy" onerror="this.src='assets/PMAD 1.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PMAD 2.jpeg" alt="Semester 1" loading="lazy" onerror="this.src='assets/PMAD 2.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PMAD 3.jpeg" alt="Semester 1" loading="lazy" onerror="this.src='assets/PMAD 3.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PMAD 1.jpeg" alt="Semester 1" loading="lazy" onerror="this.src='assets/PMAD 1.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PMAD 2.jpeg" alt="Semester 1" loading="lazy" onerror="this.src='assets/PMAD 2.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PMAD 3.jpeg" alt="Semester 1" loading="lazy" onerror="this.src='assets/PMAD 3.jpg';"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. PPL Terbimbing -->
+      <div class="timeline-box reveal">
+        <div class="timeline-num">03 • PPL TERBIMBING</div>
+        <h3 style="color: #fff; font-size: 1.4rem; margin-bottom: 15px;">Praktik Mengajar Kelas 7D SMPN 18 Malang</h3>
+        <p style="margin-bottom: 10px; line-height: 1.7; color: var(--text-muted, #ccc);">
+          PPL Terbimbing adalah pengalaman pertama mengaplikasikan teori ke dalam ruang kelas nyata dengan pendampingan intensif dari Guru Pamong. Saya mendapat kepercayaan untuk mengajar mata pelajaran Informatika di kelas 7D SMPN 18 Malang.
+        </p>
+        <p style="margin-bottom: 0; line-height: 1.7; color: var(--text-muted, #ccc);">
+          Tantangan utama yang saya hadapi adalah menjaga konsentrasi siswa di laboratorium komputer. Melalui penerapan <i>Computational Thinking</i> dan gamifikasi, saya belajar mengelola dinamika kelas 7D agar mereka tidak hanya antusias bermain dengan komputer, tetapi juga menangkap esensi logika dari materi yang diajarkan.
+        </p>
+        <div class="marquee-container">
+          <div class="marquee-track">
+            <div class="marquee-item"><img src="assets/PPLT 1.jpeg" alt="PPL Terbimbing" loading="lazy" onerror="this.src='assets/PPLT 1.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PPLT 2.jpeg" alt="PPL Terbimbing" loading="lazy" onerror="this.src='assets/PPLT 2.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PPLT 3.jpeg" alt="PPL Terbimbing" loading="lazy" onerror="this.src='assets/PPLT 3.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PPLT 4.jpeg" alt="PPL Terbimbing" loading="lazy" onerror="this.src='assets/PPLT 4.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PPLT 1.jpeg" alt="PPL Terbimbing" loading="lazy" onerror="this.src='assets/PPLT 1.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PPLT 2.jpeg" alt="PPL Terbimbing" loading="lazy" onerror="this.src='assets/PPLT 2.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PPLT 3.jpeg" alt="PPL Terbimbing" loading="lazy" onerror="this.src='assets/PPLT 3.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PPLT 4.jpeg" alt="PPL Terbimbing" loading="lazy" onerror="this.src='assets/PPLT 4.jpg';"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Wawasan Kebinekaan Global -->
+      <div class="timeline-box reveal">
+        <div class="timeline-num">04 • SEMINAR WKG</div>
+        <h3 style="color: #fff; font-size: 1.4rem; margin-bottom: 15px;">Merawat Toleransi dan Inklusivitas</h3>
+        <p style="margin-bottom: 10px; line-height: 1.7; color: var(--text-muted, #ccc);">
+          Seminar Wawasan Kebinekaan Global (WKG) merupakan program wajib yang bertujuan membekali calon guru dengan pemahaman tentang toleransi, multikulturalisme, dan profil pelajar Pancasila. Program ini menyadarkan kita bahwa ruang kelas adalah miniatur keberagaman dunia.
+        </p>
+        <p style="margin-bottom: 0; line-height: 1.7; color: var(--text-muted, #ccc);">
+          Pengalaman mengikuti WKG sangat membuka mata saya mengenai pentingnya menciptakan ruang aman (<i>safe space</i>) bagi seluruh peserta didik tanpa membedakan latar belakang. Diskusi dan permainan peran selama seminar melatih saya untuk lebih peka terhadap bias pribadi dan merawat inklusivitas di sekolah.
+        </p>
+        <div class="marquee-container">
+          <div class="marquee-track">
+            <div class="marquee-item"><img src="assets/WKG 1.jpeg" alt="WKG" loading="lazy" onerror="this.src='assets/WKG 1.jpg';"></div>
+            <div class="marquee-item"><img src="assets/WKG 2.jpeg" alt="WKG" loading="lazy" onerror="this.src='assets/WKG 2.jpg';"></div>
+            <div class="marquee-item"><img src="assets/WKG 3.jpeg" alt="WKG" loading="lazy" onerror="this.src='assets/WKG 3.jpg';"></div>
+            <div class="marquee-item"><img src="assets/WKG 1.jpeg" alt="WKG" loading="lazy" onerror="this.src='assets/WKG 1.jpg';"></div>
+            <div class="marquee-item"><img src="assets/WKG 2.jpeg" alt="WKG" loading="lazy" onerror="this.src='assets/WKG 2.jpg';"></div>
+            <div class="marquee-item"><img src="assets/WKG 3.jpeg" alt="WKG" loading="lazy" onerror="this.src='assets/WKG 3.jpg';"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Pramuka -->
+      <div class="timeline-box reveal">
+        <div class="timeline-num">05 • KMD PRAMUKA</div>
+        <h3 style="color: #fff; font-size: 1.4rem; margin-bottom: 15px;">Melatih Jiwa Kepanduan dan Kepemimpinan</h3>
+        <p style="margin-bottom: 10px; line-height: 1.7; color: var(--text-muted, #ccc);">
+          Sebagai bekal pembina karakter di sekolah, mahasiswa PPG diwajibkan mengikuti Kursus Pembina Pramuka Mahir Tingkat Dasar (KMD) yang diselenggarakan bersama Pusdik Indrakila. Kegiatan ini dilaksanakan dalam format <i>hybrid</i>: 4 hari pembekalan materi secara <i>online</i>, dilanjutkan 3 hari perkemahan tatap muka di Sengkaling.
+        </p>
+        <p style="margin-bottom: 0; line-height: 1.7; color: var(--text-muted, #ccc);">
+          Masa perkemahan di Sengkaling menjadi momen yang sangat berkesan. Kami dilatih kedisiplinan, kerjasama tim (sangga), bertahan di alam, dan cara mengemas materi kepanduan menjadi kegiatan yang menyenangkan. Pengalaman ini menguatkan jiwa kepemimpinan saya untuk diaplikasikan dalam pembinaan siswa nanti.
+        </p>
+        <div class="marquee-container">
+          <div class="marquee-track">
+            <div class="marquee-item"><img src="assets/Pramuka 1.jpeg" alt="Pramuka" loading="lazy" onerror="this.src='assets/Pramuka 1.jpg';"></div>
+            <div class="marquee-item"><img src="assets/Pramuka 2.jpeg" alt="Pramuka" loading="lazy" onerror="this.src='assets/Pramuka 2.jpg';"></div>
+            <div class="marquee-item"><img src="assets/Pramuka 3.jpeg" alt="Pramuka" loading="lazy" onerror="this.src='assets/Pramuka 3.jpg';"></div>
+            <div class="marquee-item"><img src="assets/Pramuka 1.jpeg" alt="Pramuka" loading="lazy" onerror="this.src='assets/Pramuka 1.jpg';"></div>
+            <div class="marquee-item"><img src="assets/Pramuka 2.jpeg" alt="Pramuka" loading="lazy" onerror="this.src='assets/Pramuka 2.jpg';"></div>
+            <div class="marquee-item"><img src="assets/Pramuka 3.jpeg" alt="Pramuka" loading="lazy" onerror="this.src='assets/Pramuka 3.jpg';"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Bela Negara -->
+      <div class="timeline-box reveal">
+        <div class="timeline-num">06 • BELA NEGARA</div>
+        <h3 style="color: #fff; font-size: 1.4rem; margin-bottom: 15px;">Menempa Disiplin di Markas TNI AL Malang</h3>
+        <p style="margin-bottom: 10px; line-height: 1.7; color: var(--text-muted, #ccc);">
+          Bela Negara adalah program penanaman nilai-nilai kedisiplinan, nasionalisme, dan cinta tanah air. Kegiatan ini kami laksanakan selama 2 hari intensif yang bertempat di Markas TNI AL (Lanal) Malang, digembleng langsung oleh instruktur dari jajaran angkatan laut.
+        </p>
+        <p style="margin-bottom: 0; line-height: 1.7; color: var(--text-muted, #ccc);">
+          Pengalaman di Lanal Malang sangat luar biasa. Mulai dari latihan baris-berbaris (PBB), pembinaan ketahanan fisik dan mental, hingga wawasan kebangsaan, semuanya membentuk postur dan karakter kami agar lebih tangguh. Sebagai calon guru, ketangguhan fisik dan kedisiplinan tingkat tinggi ini sangat esensial.
+        </p>
+        <div class="marquee-container">
+          <div class="marquee-track">
+            <div class="marquee-item"><img src="assets/BN 1.jpeg" alt="Bela Negara" loading="lazy" onerror="this.src='assets/BN 1.jpg';"></div>
+            <div class="marquee-item"><img src="assets/BN 2.jpeg" alt="Bela Negara" loading="lazy" onerror="this.src='assets/BN 2.jpg';"></div>
+            <div class="marquee-item"><img src="assets/BN 3.jpeg" alt="Bela Negara" loading="lazy" onerror="this.src='assets/BN 3.jpg';"></div>
+            <div class="marquee-item"><img src="assets/BN 1.jpeg" alt="Bela Negara" loading="lazy" onerror="this.src='assets/BN 1.jpg';"></div>
+            <div class="marquee-item"><img src="assets/BN 2.jpeg" alt="Bela Negara" loading="lazy" onerror="this.src='assets/BN 2.jpg';"></div>
+            <div class="marquee-item"><img src="assets/BN 3.jpeg" alt="Bela Negara" loading="lazy" onerror="this.src='assets/BN 3.jpg';"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. Perkuliahan Semester 2 -->
+      <div class="timeline-box reveal">
+        <div class="timeline-num">07 • SEMESTER 2</div>
+        <h3 style="color: #fff; font-size: 1.4rem; margin-bottom: 15px;">Penguatan Etika, Emosi, dan Evaluasi</h3>
+        <p style="margin-bottom: 10px; line-height: 1.7; color: var(--text-muted, #ccc);">
+          Memasuki semester 2, fokus perkuliahan bergeser ke arah kematangan profesional dan sosial. Terdapat tiga mata kuliah utama: Etika dan Profesionalisme Guru, Pembelajaran Sosial Emosional (PSE), serta Pembelajaran Mendalam dan Asesmen Lanjut, bersanding dengan PPL Mandiri.
+        </p>
+        <p style="margin-bottom: 0; line-height: 1.7; color: var(--text-muted, #ccc);">
+          Jika semester 1 membahas "bagaimana cara mengajar", semester 2 menyadarkan saya tentang "siapa saya saat mengajar". Saya belajar mengelola emosi dan empati siswa (PSE), memegang teguh kode etik profesi, serta menyusun asesmen lanjutan (HOTS) yang berbasis data untuk perbaikan berkelanjutan.
+        </p>
+        <div class="marquee-container">
+          <div class="marquee-track">
+            <div class="marquee-item"><img src="assets/PSE 1.jpeg" alt="Semester 2" loading="lazy" onerror="this.src='assets/PSE 1.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PSE 2.jpeg" alt="Semester 2" loading="lazy" onerror="this.src='assets/PSE 2.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PSE 3.jpeg" alt="Semester 2" loading="lazy" onerror="this.src='assets/PSE 3.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PSE 1.jpeg" alt="Semester 2" loading="lazy" onerror="this.src='assets/PSE 1.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PSE 2.jpeg" alt="Semester 2" loading="lazy" onerror="this.src='assets/PSE 2.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PSE 3.jpeg" alt="Semester 2" loading="lazy" onerror="this.src='assets/PSE 3.jpg';"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8. PPL Mandiri -->
+      <div class="timeline-box reveal">
+        <div class="timeline-num">08 • PPL MANDIRI</div>
+        <h3 style="color: #fff; font-size: 1.4rem; margin-bottom: 15px;">Tanggung Jawab Penuh di Kelas 7F</h3>
+        <p style="margin-bottom: 10px; line-height: 1.7; color: var(--text-muted, #ccc);">
+          PPL Mandiri adalah fase lepas landas, di mana saya mengambil alih tanggung jawab penuh atas kelas 7F di SMPN 18 Malang, baik secara pedagogik maupun manajerial kelas, dengan supervisi minimal.
+        </p>
+        <p style="margin-bottom: 0; line-height: 1.7; color: var(--text-muted, #ccc);">
+          Menghadapi karakter unik siswa 7F melatih kemampuan adaptasi dan respons cepat saya di lapangan. Selain tanggung jawab di dalam kelas, saya juga terlibat penuh dalam tugas piket, administrasi, dan kegiatan sekolah lainnya. Pengalaman ini memberikan gambaran paling otentik mengenai beban dan kebahagiaan menjadi seorang guru sepenuhnya.
+        </p>
+        <div class="marquee-container">
+          <div class="marquee-track">
+            <div class="marquee-item"><img src="assets/PPLM 1.jpeg" alt="PPL Mandiri" loading="lazy" onerror="this.src='assets/PPLM 1.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PPLM 2.jpeg" alt="PPL Mandiri" loading="lazy" onerror="this.src='assets/PPLM 2.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PPLM 3.jpeg" alt="PPL Mandiri" loading="lazy" onerror="this.src='assets/PPLM 3.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PPLM 4.jpeg" alt="PPL Mandiri" loading="lazy" onerror="this.src='assets/PPLM 4.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PPLM 5.jpeg" alt="PPL Mandiri" loading="lazy" onerror="this.src='assets/PPLM 5.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PPLM 6.jpeg" alt="PPL Mandiri" loading="lazy" onerror="this.src='assets/PPLM 6.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PPLM 1.jpeg" alt="PPL Mandiri" loading="lazy" onerror="this.src='assets/PPLM 1.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PPLM 2.jpeg" alt="PPL Mandiri" loading="lazy" onerror="this.src='assets/PPLM 2.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PPLM 3.jpeg" alt="PPL Mandiri" loading="lazy" onerror="this.src='assets/PPLM 3.jpg';"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9. Projek Kepemimpinan -->
+      <div class="timeline-box reveal">
+        <div class="timeline-num">09 • PROJEK KEPEMIMPINAN</div>
+        <h3 style="color: #fff; font-size: 1.4rem; margin-bottom: 15px;">Level Up Bersama AI (SMPN 25 Malang)</h3>
+        <p style="margin-bottom: 10px; line-height: 1.7; color: var(--text-muted, #ccc);">
+          Projek Kepemimpinan merupakan ajang melatih inisiatif sosial dan <i>design thinking</i>. Kelompok kami yang berjumlah 8 orang mengeksekusi program di SMPN 25 Malang dengan menyasar pengurus OSIS. Proyek kami bertajuk: <b>"Workshop Penggunaan AI Sebagai Pendukung Belajar Siswa (Level Up Bersama AI - Mengendalikan Bukan Dikendalikan)"</b>.
+        </p>
+        <p style="margin-bottom: 0; line-height: 1.7; color: var(--text-muted, #ccc);">
+          Dalam proyek ini, saya memegang amanah di bidang Publikasi, Dekorasi, dan Dokumentasi (PDD). Menyaksikan para siswa OSIS SMPN 25 Malang memahami literasi AI dan etika *prompt engineering* sungguh membanggakan. Proses ini melatih kemampuan manajerial, lobi sekolah, dan kekompakan tim kami sebelum terjun ke masyarakat.
+        </p>
+        <div class="marquee-container">
+          <div class="marquee-track">
+            <div class="marquee-item"><img src="assets/PK 1.jpeg" alt="Projek Kepemimpinan" loading="lazy" onerror="this.src='assets/PK 1.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PK 2.jpeg" alt="Projek Kepemimpinan" loading="lazy" onerror="this.src='assets/PK 2.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PK 3.jpeg" alt="Projek Kepemimpinan" loading="lazy" onerror="this.src='assets/PK 3.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PK 1.jpeg" alt="Projek Kepemimpinan" loading="lazy" onerror="this.src='assets/PK 1.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PK 2.jpeg" alt="Projek Kepemimpinan" loading="lazy" onerror="this.src='assets/PK 2.jpg';"></div>
+            <div class="marquee-item"><img src="assets/PK 3.jpeg" alt="Projek Kepemimpinan" loading="lazy" onerror="this.src='assets/PK 3.jpg';"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 10. Dokumen Refleksi PDF -->
+      <div class="pdf-section reveal">
+        <h3 style="color: #c489ff; font-size: 1rem; letter-spacing: 3px; margin-bottom: 25px; text-transform: uppercase;">✦ Dokumen Refleksi Akhir PPG ✦</h3>
+        <div class="pdf-container">
+          <!-- Modifikasi: Menggunakan data-src agar tidak memblokir loading screen -->
+          <iframe id="pdf-frame" data-src="https://drive.google.com/file/d/1wi0lL1ERe3tLAV6iMJ5-MUFY48Sr46Ds/preview" allow="autoplay" loading="lazy"></iframe>
+        </div>
+        <div style="margin-top: 25px;">
+          <a class="btn primary" href="assets/Refleksi Akhir PPG.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 8px;">
+            <span>📄</span> Buka & Download PDF
+          </a>
+        </div>
+      </div>
+      
+    </section>
+    
+    <div style="text-align: center; margin-top: 20px; margin-bottom: 50px;" class="reveal">
+      <a href="artefak.html" style="color: #aaa; text-decoration: none; font-size: 0.9rem; padding: 10px 20px; border: 1px solid rgba(255,255,255,0.2); border-radius: 50px;">← Kembali ke Artefak</a>
+    </div>
+
+  </main>
+  
+  <div id="footer-placeholder"></div>
+
+  <!-- Script Penundaan PDF (Delay Load) -->
+  <script>
+    // Memuat iframe Google Drive HANYA SETELAH seluruh halaman utama web selesai dimuat (loading screen hilang)
+    window.addEventListener("load", function() {
+      setTimeout(function() {
+        var iframe = document.getElementById("pdf-frame");
+        if (iframe) {
+          iframe.src = iframe.getAttribute("data-src");
+        }
+      }, 1500); // Jeda 1.5 detik
+    });
+  </script>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

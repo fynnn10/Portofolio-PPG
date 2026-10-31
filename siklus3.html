@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Siklus 3 | PPL Mandiri Refyan</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    .bg-overlay {
+      position: fixed; 
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      height: 100%; 
+      background: linear-gradient(to bottom, rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.97)), url('assets/UM 1.jpg') center/cover no-repeat fixed; 
+      z-index: -1;
+    }
+
+    .timeline-box {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto 35px auto;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    
+    .kicker-tag {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #34d399;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      border: 1px solid rgba(52, 211, 153, 0.3);
+      padding: 4px 10px;
+      border-radius: 50px;
+      background: rgba(52, 211, 153, 0.1);
+      text-transform: uppercase;
+    }
+
+    .data-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 15px;
+    }
+    .data-list li {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 14px;
+      color: #ddd;
+      line-height: 1.7;
+    }
+    .data-list li::before {
+      content: '✦';
+      position: absolute;
+      left: 0;
+      color: #34d399;
+    }
+    .highlight-text {
+      font-weight: bold;
+      color: #34d399;
+    }
+
+    /* CSS Penampil Video & Dokumen */
+    .media-section {
+      width: 100%;
+      max-width: 1000px;
+      margin: 50px auto 20px; 
+      padding-top: 40px;
+      border-top: 1px dashed rgba(255,255,255,0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .media-container {
+      width: 100%;
+      height: 70vh;
+      min-height: 450px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 2px solid rgba(52, 211, 153, 0.4);
+      background: rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 30px rgba(52, 211, 153, 0.15), inset 0 0 20px rgba(0,0,0,0.5);
+    }
+    .media-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background: #111;
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+  <main class="page" style="opacity: 1 !important; visibility: visible !important;">
+    
+    <div class="bg-overlay" id="custom-bg"></div>
+    <div class="orb one"></div>
+    <div class="orb three"></div>
+    
+    <!-- Header Section -->
+    <section class="container section" style="padding-top: 35px; padding-bottom: 20px;">
+      <div class="section-head">
+        <div>
+          <div class="kicker" style="color: #34d399;">Praktik Lapangan • PPL Mandiri</div>
+          <h2>Siklus 3<br>Analisis & Implementasi.</h2>
+        </div>
+        <p>Dokumentasi lengkap dan analisis komprehensif perangkat pembelajaran pada Siklus 3 di kelas VII F SMP Negeri 18 Malang.</p>
+      </div>
+    </section>
+
+    <section class="container section" style="padding-top: 0;">
+      
+      <!-- 1. Analisis Modul Ajar -->
+      <div class="timeline-box">
+        <div class="kicker-tag">01 • Modul Ajar</div>
+        <h3 style="color: #fff; font-size: 1.4rem; margin-bottom: 15px;">Praktik Pengenalan & Pembongkaran Hardware Komputer</h3>
+        <p style="margin-bottom: 10px; line-height: 1.7; color: #ccc;">
+          Modul Ajar Siklus 3 menitikberatkan pada kegiatan praktik langsung di laboratorium komputer dengan menerapkan model <b>Discovery Learning</b> dan pendekatan mendalam (*Deep Learning*). Fokus materi mengkaji perangkat keras (hardware) secara komprehensif, mulai dari perangkat eksternal hingga bedah anatomi komponen internal di dalam *casing* CPU[cite: 35].
+        </p>
+        <ul class="data-list">
+          <li><span class="highlight-text">Tujuan Pembelajaran:</span> Siswa mampu mengenali, mengklasifikasikan perangkat keras (Input, Output, Process, Storage, Pendukung), menjelaskan fungsi masing-masing komponen, serta mempraktikkan prosedur bongkar-pasang komponen secara aman dan sistematis[cite: 35].</li>
+          <li><span class="highlight-text">Prosedur Keselamatan Kerja (K3):</span> Menerapkan aturan wajib sebelum membongkar komputer (mati total/cabut kabel daya, anti-statis, tanpa paksaan, dan koordinasi dengan guru pembimbing)[cite: 33].</li>
+          <li><span class="highlight-text">Penguatan Profil Pelajar Pancasila:</span> Mengembangkan karakter bernalar kritis, mandiri, gotong royong, dan kreatif melalui kolaborasi kelompok kecil di laboratorium[cite: 35].</li>
+        </ul>
+        <div style="margin-top: 20px;">
+          <a class="btn primary" href="https://drive.google.com/drive/folders/1uc9Y-0l0mu8YgRHFaiFbB8JZNyAznJDI?usp=drive_link" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #10b981; color: #fff; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600;">
+            <span>📁</span> Akses Folder Modul Ajar Siklus 3
+          </a>
+        </div>
+      </div>
+
+      <!-- 2. Analisis Media Pembelajaran -->
+      <div class="timeline-box">
+        <div class="kicker-tag">02 • Media Pembelajaran</div>
+        <h3 style="color: #fff; font-size: 1.4rem; margin-bottom: 15px;">Media Interaktif & Visualisasi Anatomi Komputer (PPT)</h3>
+        <p style="margin-bottom: 10px; line-height: 1.7; color: #ccc;">
+          Media pembelajaran dikembangkan secara visual dan interaktif untuk memudahkan siswa memetakan objek abstrak menjadi konkret:
+        </p>
+        <ul class="data-list">
+          <li><span class="highlight-text">Visualisasi Anatomi Internal:</span> Menampilkan bedah visual Motherboard, CPU, RAM, Storage (HDD/SSD), GPU, hingga PSU dengan analogi kontekstual yang mudah dicerna (misal: CPU sebagai "otak", RAM sebagai "meja kerja", dan PSU sebagai "jantung")[cite: 33].</li>
+          <li><span class="highlight-text">Panduan Visual K3 & Langkah Praktik:</span> Menyediakan infografis aturan keselamatan kerja dan alur langkah kerja 4 tahap (Observasi, Eksekusi, Dokumentasi, Restorasi) yang ditampilkan melalui proyektor di kelas/laboratorium[cite: 33].</li>
+        </ul>
+        <div style="margin-top: 20px;">
+          <a class="btn primary" href="https://drive.google.com/drive/folders/1-pzZGv68-NJPpATYcnbV6Oh61DrtlwyV?usp=drive_link" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #10b981; color: #fff; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600;">
+            <span>💻</span> Akses Folder Media Pembelajaran Siklus 3
+          </a>
+        </div>
+      </div>
+
+      <!-- 3. Analisis LKPD -->
+      <div class="timeline-box">
+        <div class="kicker-tag">03 • Lembar Kerja (LKPD)</div>
+        <h3 style="color: #fff; font-size: 1.4rem; margin-bottom: 15px;">Praktik Identifikasi & Dokumentasi Hardware</h3>
+        <p style="margin-bottom: 10px; line-height: 1.7; color: #ccc;">
+          LKPD dirancang sebagai panduan kerja investigatif bagi peserta didik selama melakukan praktik langsung di laboratorium:
+        </p>
+        <ul class="data-list">
+          <li><span class="highlight-text">Tabel Klasifikasi Komponen:</span> Memandu siswa mengidentifikasi dan mencatat fungsi perangkat ke dalam kelompok <i>Input, Process, Output, Storage</i>, hingga komponen pendukung (PSU dan Pendingin/Heatsink)[cite: 28].</li>
+          <li><span class="highlight-text">Dokumentasi & Restorasi:</span> Berisi instruksi penempelan foto/gambar hasil pengamatan komponen lab dan CPU bekas yang dibongkar, serta pengujian pemahaman alur kerja sistem komputer secara utuh[cite: 28].</li>
+        </ul>
+        <div style="margin-top: 20px;">
+          <a class="btn primary" href="https://drive.google.com/drive/folders/172U3qyM1YfFF1zrvMZz0s2PWfpvuYGhu?usp=drive_link" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #10b981; color: #fff; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600;">
+            <span>📝</span> Akses Folder LKPD Siklus 3
+          </a>
+        </div>
+      </div>
+
+      <!-- 4. Video Pelaksanaan Siklus 3 -->
+      <div class="media-section">
+        <h3 style="color: #34d399; font-size: 1.1rem; letter-spacing: 2px; margin-bottom: 25px; text-transform: uppercase;">✦ Video Pelaksanaan Pembelajaran Siklus 3 ✦</h3>
+        <div class="media-container">
+          <!-- Menggunakan lazy loading iframe untuk menjaga kecepatan akses halaman -->
+          <iframe src="https://drive.google.com/file/d/1IyoB17zghbeEAjQsZtLYPJVGhfpS7cB1/preview" allow="autoplay" loading="lazy"></iframe>
+        </div>
+        <div style="margin-top: 25px;">
+          <a class="btn primary" href="https://drive.google.com/file/d/1IyoB17zghbeEAjQsZtLYPJVGhfpS7cB1/view?usp=drive_link" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #3b82f6; color: #fff; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600;">
+            <span>🎥</span> Tonton / Download Video Lengkap di Drive
+          </a>
+        </div>
+      </div>
+      
+    </section>
+    
+    <div style="text-align: center; margin-top: 20px; margin-bottom: 50px;">
+      <a href="portofolio-ppl-mandiri.html" style="color: #aaa; text-decoration: none; font-size: 0.9rem; padding: 10px 20px; border: 1px solid rgba(255,255,255,0.2); border-radius: 50px; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='transparent'">← Kembali ke Menu PPL Mandiri</a>
+    </div>
+
+  </main>
+  
+  <div id="footer-placeholder"></div>
+  <script src="data.js"></script>
+</body>
+</html>

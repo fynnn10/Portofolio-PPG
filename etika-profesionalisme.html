@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Etika Dan Profesionalisme Guru | E-Portofolio Refyan</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* CSS untuk merapikan kotak teks refleksi agar di tengah dan lebar */
+    .refleksi-box {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      background: var(--card-bg, rgba(255, 255, 255, 0.03));
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 35px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    /* CSS untuk wadah PDF agar Full, Center & Punya Border Menarik */
+    .pdf-section {
+      width: 100%;
+      max-width: 1000px;
+      margin: 50px auto 20px; 
+      padding-top: 40px;
+      border-top: 1px dashed rgba(255,255,255,0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .pdf-container {
+      width: 100%;
+      height: 75vh;
+      min-height: 500px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 2px solid rgba(74, 144, 226, 0.4);
+      background: rgba(0, 0, 0, 0.4);
+      box-shadow: 0 0 30px rgba(74, 144, 226, 0.15), inset 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    .pdf-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* CSS untuk Live Auto-Slider (Marquee) yang mulus */
+    .slider-wrapper {
+      width: 100%;
+      max-width: 1000px;
+      margin: 50px auto;
+      text-align: center;
+    }
+
+    .marquee-container {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      padding: 10px 0;
+      mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+      -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    }
+
+    .marquee-track {
+      display: inline-block;
+      animation: marquee 25s linear infinite;
+    }
+
+    .marquee-track:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .marquee-item {
+      display: inline-block;
+      width: 280px;
+      height: 180px;
+      margin: 0 10px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .marquee-item:hover {
+      transform: scale(1.05);
+    }
+
+    .marquee-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <main class="page">
+    <div class="grid-bg"></div>
+    <div class="orb one"></div>
+    <div class="orb two"></div>
+
+    <!-- Header Section -->
+    <section class="container section" style="padding-top: 35px;">
+      <div class="section-head reveal">
+        <div>
+          <div class="kicker">Semester 2 • Mata Kuliah Inti</div>
+          <h2>Etika Dan<br>Profesionalisme Guru.</h2>
+        </div>
+
+        <p>Membangun identitas dan integritas sebagai pendidik profesional yang berpegang teguh pada kode etik dan nilai-nilai luhur.</p>
+      </div>
+    </section>
+
+    <!-- Deskripsi Mata Kuliah Section -->
+    <section class="container section">
+      <div class="cards" style="grid-template-columns: 1fr;">
+        <article class="card reveal">
+          <div class="card-num">TENTANG MATA KULIAH</div>
+          <h3>Integritas dan Identitas Pendidik</h3>
+
+          <p style="margin-bottom: 10px;">
+            Mata kuliah Etika dan Profesionalisme Guru adalah mata kuliah yang membahas nilai moral, norma, prinsip, dan tanggung jawab yang menjadi pedoman guru dalam menjalankan profesinya. Etika guru membantu pendidik menentukan tindakan yang benar dan adil, menghormati hak peserta didik, menjaga kerahasiaan, serta membangun hubungan yang sehat dengan siswa, orang tua, rekan sejawat, dan masyarakat.
+          </p>
+
+          <p style="margin-bottom: 10px;">
+            Profesionalisme guru berarti menjalankan tugas berdasarkan kompetensi, integritas, tanggung jawab, komitmen terhadap pembelajaran, dan kemauan untuk terus mengembangkan diri. Melalui mata kuliah ini, mahasiswa mempelajari penerapan kode etik, cara menghadapi dilema etika, serta pentingnya menjadi teladan di dalam maupun di luar kelas, termasuk ketika menggunakan teknologi dan berinteraksi di ruang digital.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Artefak Section -->
+    <section class="container section">
+      <div class="section-head reveal">
+        <div>
+          <div class="kicker">Dokumentasi Karya</div>
+          <h2>Artefak Pembelajaran.</h2>
+        </div>
+
+        <p>Kumpulan tugas, ruang kolaborasi, dan studi kasus etika profesi selama perkuliahan ini.</p>
+      </div>
+
+      <div class="cards">
+
+        <!-- Topik 1 -->
+        <article class="card reveal">
+          <div class="card-num">TOPIK 01</div>
+          <h3>Karakter Luhur Guru (Kepribadian dan Sosial)</h3>
+          <p>Membahas landasan filosofis tentang profesi keguruan, etika dasar, dan tanggung jawab moral seorang guru.</p>
+
+          <a class="card-link"
+             href="https://drive.google.com/drive/folders/13EemwbhY9sx1r08E-IOutc5otDOkj_OB?usp=drive_link"
+             target="_blank"
+             rel="noopener noreferrer">
+            Buka Folder Topik 1 ↗
+          </a>
+        </article>
+
+        <!-- Topik 2 -->
+        <article class="card reveal delay-1">
+          <div class="card-num">TOPIK 02</div>
+          <h3>Profil Guru Profesional</h3>
+          <p>Eksplorasi dan analisis butir-butir Kode Etik Guru beserta pedoman penerapannya di lingkungan sekolah.</p>
+
+          <a class="card-link"
+             href="https://drive.google.com/drive/folders/1YjDJXUA38S0kcQcY6-wQuFKta4fe9WVc?usp=drive_link"
+             target="_blank"
+             rel="noopener noreferrer">
+            Buka Folder Topik 2 ↗
+          </a>
+        </article>
+
+        <!-- Topik 3 -->
+        <article class="card reveal delay-2">
+          <div class="card-num">TOPIK 03</div>
+          <h3>Kompetensi Guru Abad 21 (4C dan Literasi Digital)</h3>
+          <p>Studi kasus nyata mengenai dilema etika di sekolah dan kerangka penyelesaian berbasis nilai kebajikan.</p>
+
+          <a class="card-link"
+             href="https://drive.google.com/drive/folders/159acQLw-WQWESYT-MnGvlojWPWK7FxCz?usp=drive_link"
+             target="_blank"
+             rel="noopener noreferrer">
+            Buka Folder Topik 3 ↗
+          </a>
+        </article>
+
+        <!-- Topik 4 -->
+        <article class="card reveal">
+          <div class="card-num">TOPIK 04</div>
+          <h3>Guru Sebagai Pembelajar Sepanjang Hayat</h3>
+          <p>Merancang peta jalan Pengembangan Keprofesian Berkelanjutan (PKB) untuk meningkatkan kompetensi diri.</p>
+
+          <a class="card-link"
+             href="https://drive.google.com/drive/folders/1ncoX0iVYHaIVE3dP9bSXswjJKCEX6BA6?usp=drive_link"
+             target="_blank"
+             rel="noopener noreferrer">
+            Buka Folder Topik 4 ↗
+          </a>
+        </article>
+
+        <!-- Topik 5 -->
+        <article class="card reveal delay-1">
+          <div class="card-num">TOPIK 05</div>
+          <h3>Pembelajaran Mendalam dan Berdampak</h3>
+          <p>Dokumentasi artefak pembelajaran untuk menerapkan nilai etika, tanggung jawab, dan sikap profesional dalam praktik keguruan.</p>
+
+          <a class="card-link"
+             href="https://drive.google.com/drive/folders/1tc-j9JCZyDhLztF4wUg8IQvSdElwceHT?usp=drive_link"
+             target="_blank"
+             rel="noopener noreferrer">
+            Buka Folder Topik 5 ↗
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Refleksi Akhir Section -->
+    <section class="container section">
+      <div class="section-head reveal">
+        <div>
+          <div class="kicker">Evaluasi Diri</div>
+          <h2>Refleksi Pengalaman.</h2>
+        </div>
+
+        <p>Menyadari bahwa menjadi guru bukan sekadar tentang apa yang diajarkan, melainkan tentang siapa kita di hadapan murid.</p>
+      </div>
+
+      <!-- Teks Refleksi -->
+      <div class="refleksi-box reveal">
+        <h3 style="color: #fff; font-size: 1.5rem; margin-bottom: 15px;">
+          Makna Pembelajaran Bagi Saya
+        </h3>
+
+        <p style="margin-bottom: 15px; line-height: 1.7; color: var(--text-muted, #ccc);">
+          Mempelajari Etika dan Profesionalisme Guru menyadarkan saya bahwa penguasaan teknologi dan materi pedagogik saja tidak cukup. Tanpa dilandasi oleh integritas dan etika yang kuat, seorang guru akan kehilangan wibawanya dan gagal menjalankan fungsi utamanya sebagai pendidik karakter. Tantangan di lapangan, seperti menghadapi konflik, menjaga batasan profesional dengan siswa, hingga dilema etis, sangat membutuhkan kompas moral yang jernih.
+        </p>
+
+        <p style="margin-bottom: 0; line-height: 1.7; color: var(--text-muted, #ccc);">
+          Ke depannya, saya berkomitmen untuk terus menjaga marwah profesi guru. Saya akan menjadikan Kode Etik Guru sebagai landasan dalam bertindak, menjaga komunikasi yang profesional baik dengan rekan sejawat maupun wali murid, dan terus melakukan refleksi diri. Mata kuliah ini adalah pengingat abadi bahwa esensi dari semboyan "digugu dan ditiru" adalah tanggung jawab moral seumur hidup.
+        </p>
+      </div>
+
+      <!-- PDF Viewer Section -->
+      <div class="pdf-section reveal delay-1">
+        <h3 style="color: #6fb3ff; font-size: 1rem; letter-spacing: 3px; margin-bottom: 25px; text-transform: uppercase;">
+          ✦ Dokumen Refleksi LK 2 ✦
+        </h3>
+
+        <div class="pdf-container">
+          <iframe
+            src="https://drive.google.com/file/d/1lm282oTVpdWZjttOa03Cn_fYVhoBQSkw/preview"
+            allow="autoplay"
+            loading="lazy">
+          </iframe>
+        </div>
+
+        <div style="margin-top: 25px;">
+          <a class="btn primary"
+             href="assets/Refleksi Etika Dan Profesionalisme Guru.pdf"
+             target="_blank"
+             style="display: inline-flex; align-items: center; gap: 8px;">
+            <span>📄</span> Buka & Download PDF
+          </a>
+        </div>
+      </div>
+
+      <!-- Live Auto-Slider Foto (EPG 1 sampai EPG 4) -->
+      <div class="slider-wrapper reveal delay-2">
+        <h3 style="color: #fff; font-size: 1.2rem; margin-bottom: 5px;">
+          Jejak Dokumentasi
+        </h3>
+
+        <p style="color: #888; font-size: 0.9rem; margin-bottom: 20px;">
+          Arahkan kursor untuk menghentikan gambar sementara.
+        </p>
+
+        <div class="marquee-container">
+          <div class="marquee-track">
+
+            <!-- Set Gambar Pertama -->
+            <div class="marquee-item">
+              <img src="assets/EPG 1.jpeg" alt="EPG 1" loading="lazy"
+                   onerror="this.src='assets/EPG 1.jpg'; this.onerror=null;">
+            </div>
+
+            <div class="marquee-item">
+              <img src="assets/EPG 2.jpeg" alt="EPG 2" loading="lazy"
+                   onerror="this.src='assets/EPG 2.jpg'; this.onerror=null;">
+            </div>
+
+            <div class="marquee-item">
+              <img src="assets/EPG 3.jpeg" alt="EPG 3" loading="lazy"
+                   onerror="this.src='assets/EPG 3.jpg'; this.onerror=null;">
+            </div>
+
+            <div class="marquee-item">
+              <img src="assets/EPG 4.jpeg" alt="EPG 4" loading="lazy"
+                   onerror="this.src='assets/EPG 4.jpg'; this.onerror=null;">
+            </div>
+
+            <!-- Set Gambar Kedua untuk efek putaran mulus -->
+            <div class="marquee-item">
+              <img src="assets/EPG 1.jpeg" alt="EPG 1" loading="lazy"
+                   onerror="this.src='assets/EPG 1.jpg'; this.onerror=null;">
+            </div>
+
+            <div class="marquee-item">
+              <img src="assets/EPG 2.jpeg" alt="EPG 2" loading="lazy"
+                   onerror="this.src='assets/EPG 2.jpg'; this.onerror=null;">
+            </div>
+
+            <div class="marquee-item">
+              <img src="assets/EPG 3.jpeg" alt="EPG 3" loading="lazy"
+                   onerror="this.src='assets/EPG 3.jpg'; this.onerror=null;">
+            </div>
+
+            <div class="marquee-item">
+              <img src="assets/EPG 4.jpeg" alt="EPG 4" loading="lazy"
+                   onerror="this.src='assets/EPG 4.jpg'; this.onerror=null;">
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <div style="text-align: center; margin-top: 40px; margin-bottom: 40px;" class="reveal">
+      <a href="semester2.html"
+         style="color: #aaa; text-decoration: none; font-size: 0.9rem; padding: 10px 20px; border: 1px solid rgba(255,255,255,0.2); border-radius: 50px;">
+        ← Kembali ke Daftar Mata Kuliah Semester 2
+      </a>
+    </div>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

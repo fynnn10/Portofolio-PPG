@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Projek Kepemimpinan | E-Portofolio Refyan</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    /* CSS untuk merapikan kotak teks refleksi agar di tengah dan lebar */
+    .refleksi-box {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      background: var(--card-bg, rgba(255, 255, 255, 0.03));
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 35px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    /* CSS untuk wadah PDF agar Full, Center & Punya Border Menarik */
+    .pdf-section {
+      width: 100%;
+      max-width: 1000px;
+      margin: 50px auto 20px; 
+      padding-top: 40px;
+      border-top: 1px dashed rgba(255,255,255,0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .pdf-container {
+      width: 100%;
+      height: 75vh;
+      min-height: 500px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 2px solid rgba(74, 144, 226, 0.4);
+      background: rgba(0, 0, 0, 0.4);
+      box-shadow: 0 0 30px rgba(74, 144, 226, 0.15), inset 0 0 20px rgba(0,0,0,0.5);
+    }
+    .pdf-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* CSS untuk Live Auto-Slider (Marquee) yang mulus */
+    .slider-wrapper {
+      width: 100%;
+      max-width: 1000px;
+      margin: 50px auto;
+      text-align: center;
+    }
+    .marquee-container {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      padding: 10px 0;
+      mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+      -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    }
+    .marquee-track {
+      display: inline-block;
+      /* Animasi durasi 30 detik untuk 5 gambar */
+      animation: marquee 30s linear infinite;
+    }
+    .marquee-track:hover {
+      animation-play-state: paused;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .marquee-item {
+      display: inline-block;
+      width: 280px;
+      height: 180px;
+      margin: 0 10px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+    .marquee-item:hover {
+      transform: scale(1.05);
+    }
+    .marquee-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+  <main class="page">
+    <div class="grid-bg"></div>
+    <div class="orb one"></div>
+    <div class="orb two"></div>
+    
+    <!-- Header Section -->
+    <section class="container section" style="padding-top: 35px;">
+      <div class="section-head reveal">
+        <div>
+          <div class="kicker">Semester 2 • Mata Kuliah Inti</div>
+          <h2>Projek<br>Kepemimpinan.</h2>
+        </div>
+        <p>Mengembangkan inisiatif, kolaborasi, dan jiwa kepemimpinan melalui aksi nyata yang berdampak positif pada ekosistem pendidikan dan masyarakat.</p>
+      </div>
+    </section>
+
+    <!-- Deskripsi Mata Kuliah Section -->
+    <section class="container section">
+      <div class="cards" style="grid-template-columns: 1fr;">
+        <article class="card reveal">
+          <div class="card-num">TENTANG MATA KULIAH</div>
+          <h3>Apa Itu Projek Kepemimpinan?</h3>
+          <p style="margin-bottom: 10px;">
+            <b>Projek Kepemimpinan</b> adalah mata kuliah yang melatih mahasiswa PPG untuk tidak hanya cakap mengajar di dalam kelas, tetapi juga mampu menjadi agen perubahan (<i>agent of change</i>) di tengah masyarakat atau ekosistem sekolah. Melalui mata kuliah ini, calon guru ditantang untuk peka terhadap lingkungan sekitar, merumuskan masalah, dan memimpin inisiatif sosial yang bermakna.
+          </p>
+          <p style="margin-bottom: 10px;">
+            Proses pembelajarannya mencakup pemetaan kebutuhan berbasis <i>Design Thinking</i>, perumusan visi dan prakarsa perubahan, manajemen proyek, negosiasi dengan pemangku kepentingan (<i>stakeholders</i>), hingga pelaksanaan eksekusi dan pameran hasil karya. Fokus utama mata kuliah ini adalah penempaan <i>soft skills</i>—seperti pemecahan masalah yang kreatif, komunikasi asertif, resiliensi, dan kolaborasi tim—yang sangat dibutuhkan oleh seorang pemimpin masa depan.
+          </p>
+          <p style="margin-bottom: 0;">
+            Mata kuliah ini menekankan pentingnya visi guru profesional, perencanaan projek kepemimpinan, implementasi dan manajemen projek, serta monitoring, evaluasi, laporan akhir, dan refleksi sebagai satu siklus kepemimpinan yang utuh dan berkelanjutan.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Artefak Section -->
+    <section class="container section">
+      <div class="section-head reveal">
+        <div>
+          <div class="kicker">Dokumentasi Karya</div>
+          <h2>Artefak Pembelajaran.</h2>
+        </div>
+        <p>Kumpulan proposal, logbook pelaksanaan, pelaporan proyek, dan dokumentasi gelar karya.</p>
+      </div>
+      <div class="cards">
+        
+        <!-- Topik 1 -->
+        <article class="card reveal">
+          <div class="card-num">TOPIK 01</div>
+          <h3>Visi Guru Profesional</h3>
+          <p>Merumuskan visi pribadi sebagai guru profesional yang mampu menginspirasi, membimbing, dan menggerakkan perubahan di lingkungan sekolah.</p>
+          <a class="card-link" href="https://drive.google.com/drive/folders/1X-CUHq_IWcMKUJx4NVBxu6-DFCUb40B6?usp=drive_link" target="_blank" rel="noopener">Buka Folder Topik 1 ↗</a>
+        </article>
+        
+        <!-- Topik 2 -->
+        <article class="card reveal delay-1">
+          <div class="card-num">TOPIK 02</div>
+          <h3>Perencanaan Projek Kepemimpinan</h3>
+          <p>Menyusun rancangan projek kepemimpinan yang sistematis, meliputi analisis kebutuhan, tujuan, sasaran, strategi, dan indikator keberhasilan.</p>
+          <a class="card-link" href="https://drive.google.com/drive/folders/1GTAiqBCYyVb6g2jhe7znHvUC5tdITn_o?usp=drive_link" target="_blank" rel="noopener">Buka Folder Topik 2 ↗</a>
+        </article>
+
+        <!-- Topik 3 -->
+        <article class="card reveal delay-2">
+          <div class="card-num">TOPIK 03</div>
+          <h3>Implementasi dan Manajemen Projek</h3>
+          <p>Melaksanakan projek kepemimpinan dengan mengelola sumber daya, tim, waktu, dan risiko secara efektif untuk mencapai tujuan yang telah ditetapkan.</p>
+          <a class="card-link" href="https://drive.google.com/drive/folders/1gtSOhGour0ek5qHh9OJDCuTg0Gkhg991?usp=drive_link" target="_blank" rel="noopener">Buka Folder Topik 3 ↗</a>
+        </article>
+
+        <!-- Topik 4 -->
+        <article class="card reveal">
+          <div class="card-num">TOPIK 04</div>
+          <h3>Projek Monitoring, Evaluasi, Laporan Akhir, Refleksi</h3>
+          <p>Memantau dan mengevaluasi pelaksanaan projek, menyusun laporan akhir, serta melakukan refleksi untuk perbaikan dan keberlanjutan kepemimpinan.</p>
+          <a class="card-link" href="https://drive.google.com/drive/folders/1t49zCREsLh6A1QD1HKYALz8iJQZF-5Yo?usp=drive_link" target="_blank" rel="noopener">Buka Folder Topik 4 ↗</a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Refleksi Akhir Section -->
+    <section class="container section">
+      <div class="section-head reveal">
+        <div>
+          <div class="kicker">Evaluasi Diri</div>
+          <h2>Refleksi Pengalaman.</h2>
+        </div>
+        <p>Belajar bahwa ide besar tidak akan terwujud tanpa kemampuan manajemen tim dan komunikasi yang empatik.</p>
+      </div>
+
+      <!-- Teks Refleksi (Centered Box) -->
+      <div class="refleksi-box reveal">
+        <h3 style="color: #fff; font-size: 1.5rem; margin-bottom: 15px;">Makna Pembelajaran Bagi Saya</h3>
+        <p style="margin-bottom: 15px; line-height: 1.7; color: var(--text-muted, #ccc);">
+          Menjalankan Projek Kepemimpinan memberikan saya tamparan realita yang positif bahwa menjadi guru berarti siap menjadi seorang perancang masa depan dan pemimpin di komunitas. Sepanjang pelaksanaan proyek ini, saya belajar bahwa niat baik semata tidak cukup; dibutuhkan perencanaan terstruktur, pengelolaan konflik dalam tim, dan negosiasi yang luwes saat berkoordinasi dengan pihak luar.
+        </p>
+        <p style="margin-bottom: 0; line-height: 1.7; color: var(--text-muted, #ccc);">
+          Dinamika dan kendala tak terduga yang terjadi di lapangan melatih mental saya agar menjadi lebih tangguh (<i>resilient</i>) dan mampu mengambil keputusan secara taktis. Pengalaman mahal dalam memanajemen proyek kolaboratif ini akan menjadi modal kuat saya kelak ketika harus mengelola program kerja sekolah, pembinaan kesiswaan, atau menciptakan inovasi program pendidikan di tempat saya mengabdi.
+        </p>
+      </div>
+
+      <!-- PDF Viewer Section -->
+      <div class="pdf-section reveal delay-1">
+        <h3 style="color: #6fb3ff; font-size: 1rem; letter-spacing: 3px; margin-bottom: 25px; text-transform: uppercase;">✦ Dokumen Refleksi LK 2 ✦</h3>
+        <div class="pdf-container">
+          <!-- Link PDF diubah ke mode preview agar bisa embed -->
+          <iframe src="https://drive.google.com/file/d/1jXQ_E_M9_MwsJCLuN-tAIDgfyl8V5Kut/preview" allow="autoplay" loading="lazy"></iframe>
+        </div>
+        <div style="margin-top: 25px;">
+          <a class="btn primary" href="assets/Refleksi Projek Kepemimpinan.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 8px;">
+            <span>📄</span> Buka & Download PDF
+          </a>
+        </div>
+      </div>
+
+      <!-- Live Auto-Slider Foto (PK 1 sampai PK 5) -->
+      <div class="slider-wrapper reveal delay-2">
+        <h3 style="color: #fff; font-size: 1.2rem; margin-bottom: 5px;">Jejak Dokumentasi</h3>
+        <p style="color: #888; font-size: 0.9rem; margin-bottom: 20px;">Arahkan kursor untuk menghentikan gambar sementara.</p>
+        
+        <div class="marquee-container">
+          <div class="marquee-track">
+            <!-- Set Gambar Pertama (5 Gambar) -->
+            <div class="marquee-item"><img src="assets/PK 1.png" alt="PK 1" loading="lazy" onerror="this.src='assets/PK 1.png'; this.onerror=null;"></div>
+            <div class="marquee-item"><img src="assets/PK 2.png" alt="PK 2" loading="lazy" onerror="this.src='assets/PK 2.png'; this.onerror=null;"></div>
+            <div class="marquee-item"><img src="assets/PK 3.jpeg" alt="PK 3" loading="lazy" onerror="this.src='assets/PK 3.jpg'; this.onerror=null;"></div>
+            <div class="marquee-item"><img src="assets/PK 4.jpeg" alt="PK 4" loading="lazy" onerror="this.src='assets/PK 4.jpg'; this.onerror=null;"></div>
+            <div class="marquee-item"><img src="assets/PK 5.jpeg" alt="PK 5" loading="lazy" onerror="this.src='assets/PK 5.jpg'; this.onerror=null;"></div>
+            
+            <!-- Set Gambar Kedua (Duplikat untuk putaran mulus tak terbatas) -->
+            <div class="marquee-item"><img src="assets/PK 1.png" alt="PK 1" loading="lazy" onerror="this.src='assets/PK 1.png'; this.onerror=null;"></div>
+            <div class="marquee-item"><img src="assets/PK 2.png" alt="PK 2" loading="lazy" onerror="this.src='assets/PK 2.png'; this.onerror=null;"></div>
+            <div class="marquee-item"><img src="assets/PK 3.jpeg" alt="PK 3" loading="lazy" onerror="this.src='assets/PK 3.jpg'; this.onerror=null;"></div>
+            <div class="marquee-item"><img src="assets/PK 4.jpeg" alt="PK 4" loading="lazy" onerror="this.src='assets/PK 4.jpg'; this.onerror=null;"></div>
+            <div class="marquee-item"><img src="assets/PK 5.jpeg" alt="PK 5" loading="lazy" onerror="this.src='assets/PK 5.jpg'; this.onerror=null;"></div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    
+    <div style="text-align: center; margin-top: 40px; margin-bottom: 40px;" class="reveal">
+      <a href="semester2.html" style="color: #aaa; text-decoration: none; font-size: 0.9rem; padding: 10px 20px; border: 1px solid rgba(255,255,255,0.2); border-radius: 50px;">← Kembali ke Daftar Mata Kuliah Semester 2</a>
+    </div>
+
+  </main>
+  
+  <div id="footer-placeholder"></div>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
